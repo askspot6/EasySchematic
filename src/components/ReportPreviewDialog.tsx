@@ -8,6 +8,7 @@ import {
   PAPER_LABELS,
 } from "../reportLayout";
 import { renderReportPdf, type ReportTableData } from "../reportPdf";
+import { useTheme } from "../hooks/useTheme";
 import { useSchematicStore } from "../store";
 import {
   getCoveredPositions,
@@ -292,9 +293,11 @@ function ReportPreviewDialog({
     footerLayout: effectiveFooterLayout,
   }), [layout, effectiveHeaderLayout, effectiveFooterLayout]);
 
+  const { isDark } = useTheme();
+
   const handleExportPdf = useCallback(async () => {
-    await renderReportPdf(effectiveLayout, titleBlock, tables, filename);
-  }, [effectiveLayout, titleBlock, tables, filename]);
+    await renderReportPdf(effectiveLayout, titleBlock, tables, filename, isDark);
+  }, [effectiveLayout, titleBlock, tables, filename, isDark]);
 
   // Zoom + pagination
   const [zoom, setZoom] = useState(1);

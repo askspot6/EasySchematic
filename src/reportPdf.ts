@@ -70,6 +70,7 @@ function drawGridBlock(
   pageWidthMm: number,
   pageNum: number,
   totalPages: number,
+  isDark = false,
 ) {
   const bl = block === "header" ? layout.headerLayout : layout.footerLayout;
   const blockH = block === "header" ? layout.headerHeightMm : layout.footerHeightMm;
@@ -109,7 +110,7 @@ function drawGridBlock(
     if (colorMatch) {
       doc.setTextColor(parseInt(colorMatch[1], 16), parseInt(colorMatch[2], 16), parseInt(colorMatch[3], 16));
     } else {
-      doc.setTextColor(0);
+      doc.setTextColor(isDark ? 220 : 0);
     }
 
     let text = "";
@@ -160,10 +161,20 @@ function drawGridBlock(
     }
   }
 
-  doc.setTextColor(0);
+  doc.setTextColor(isDark ? 220 : 0);
 }
 
 // ─── Table Renderer ───
+
+type ColorPalette = {
+  text: number;
+  subText: number;
+  headerFill: [number,number,number];
+  rowAltFill: [number,number,number];
+  groupFill:  [number,number,number];
+  border:     [number,number,number];
+  pageBg:     [number,number,number];
+};
 
 function drawTableSection(
   doc: jsPDF,
@@ -172,6 +183,7 @@ function drawTableSection(
   startY: number,
   bottomLimit: number,
   contentWidthMm: number,
+  colors: ColorPalette,
 ): number {
   const visCols = getVisibleColumns(tableDef, contentWidthMm, COL_GAP);
   if (visCols.length === 0) return startY;
@@ -186,7 +198,7 @@ function drawTableSection(
   let sectionTopY = 0;
 
   const setupBorderStyle = () => {
-    doc.setDrawColor(200, 200, 200); // #ccc
+    doc.setDrawColor(...colors.border);
     doc.setLineWidth(0.2);
   };
 
@@ -230,7 +242,7 @@ function drawTableSection(
   const drawSectionTitle = (label: string) => {
     doc.setFontSize(11);
     doc.setFont("Inter", "bold");
-    doc.setTextColor(0);
+    doc.setTextColor(colors.text);
     doc.text(label, REPORT_MARGIN_MM, y);
     y += HEADER_HEIGHT;
     doc.setFont("Inter", "normal");
@@ -244,9 +256,9 @@ function drawTableSection(
 
     doc.setFontSize(HEADER_FONT_SIZE);
     doc.setFont("Inter", "bold");
-    doc.setFillColor(240, 240, 240);
+    doc.setFillColor(...colors.headerFill);
     doc.rect(tableLeft, headerTop, tableWidth, HEADER_HEIGHT, "F");
-    doc.setTextColor(0);
+    doc.setTextColor(colors.text);
     let x = REPORT_MARGIN_MM;
     for (const col of visCols) {
       doc.text(col.header, x, y);
@@ -276,10 +288,16 @@ function drawTableSection(
   };
 
   const drawRow = (row: Record<string, string>, rowIndex: number) => {
+    y += ROW_HEIGHT;
+    if (y > bottomLimit) {
+      repeatOnNewPage();
+      y += ROW_HEIGHT;
+    }
+
     const isSubItem = row._isSubItem === "true";
     const lineHeight = FONT_SIZE * 0.352778 * 1.4; // pt → mm with leading
 
-    // Measure how many lines each cell needs; take the max to set row height
+    // Measure max lines needed across all cells to set dynamic row height
     doc.setFontSize(FONT_SIZE);
     let maxLines = 1;
     for (const col of visCols) {
@@ -299,17 +317,16 @@ function drawTableSection(
     const rowTop = y - dynamicRowHeight + 2;
 
     if (rowIndex % 2 === 1) {
-      doc.setFillColor(248, 248, 248);
+      doc.setFillColor(...colors.rowAltFill);
       doc.rect(tableLeft, rowTop, tableWidth, dynamicRowHeight, "F");
     }
 
-    doc.setTextColor(isSubItem ? 120 : 0);
+    doc.setTextColor(isSubItem ? colors.subText : colors.text);
     let x = REPORT_MARGIN_MM;
     for (const col of visCols) {
       const text = row[col.key] ?? "";
       const indent = isSubItem && col.key !== "count" ? 4 : 0;
       const lines = doc.splitTextToSize(text, col.widthMm - indent) as string[];
-      // Draw each wrapped line individually so they stay inside the row bounds
       lines.forEach((line, li) => {
         doc.text(line, x + indent, rowTop + lineHeight * (li + 1));
       });
@@ -331,9 +348,9 @@ function drawTableSection(
     const ghTop = y - ROW_HEIGHT + 2;
     doc.setFontSize(FONT_SIZE);
     doc.setFont("Inter", "bold");
-    doc.setFillColor(230, 235, 245);
+    doc.setFillColor(...colors.groupFill);
     doc.rect(tableLeft, ghTop - 2, tableWidth, ROW_HEIGHT, "F");
-    doc.setTextColor(0);
+    doc.setTextColor(colors.text);
     doc.text(label, REPORT_MARGIN_MM, y);
     doc.setFont("Inter", "normal");
 
@@ -375,7 +392,19 @@ export async function renderReportPdf(
   titleBlock: TitleBlock,
   tableData: ReportTableData[],
   filename: string,
+  isDark = false,
 ): Promise<void> {
+  // Color palette — flips for dark mode
+  const colors = {
+    text:       isDark ? 220 : 0,
+    subText:    isDark ? 150 : 120,
+    headerFill: isDark ? [45, 45, 45]  as [number,number,number] : [240, 240, 240] as [number,number,number],
+    rowAltFill: isDark ? [35, 35, 35]  as [number,number,number] : [248, 248, 248] as [number,number,number],
+    groupFill:  isDark ? [40, 45, 60]  as [number,number,number] : [230, 235, 245] as [number,number,number],
+    border:     isDark ? [80, 80, 80]  as [number,number,number] : [200, 200, 200] as [number,number,number],
+    pageBg:     isDark ? [24, 24, 27]  as [number,number,number] : [255, 255, 255] as [number,number,number],
+  };
+
   const { widthMm, heightMm } = getPageDimensions(layout.paperSize, layout.orientation);
   const doc = new jsPDF({
     orientation: layout.orientation,
@@ -386,11 +415,17 @@ export async function renderReportPdf(
   // Load Inter font into jsPDF
   await loadInterFont(doc);
 
+  // Fill page background for dark mode
+  if (isDark) {
+    doc.setFillColor(...colors.pageBg);
+    doc.rect(0, 0, widthMm, heightMm, "F");
+  }
+
   // Footer reserve: content must stop before the footer
   const bottomLimit = heightMm - REPORT_MARGIN_MM - layout.footerHeightMm - 2;
 
   // Header
-  drawGridBlock(doc, layout, titleBlock, "header", widthMm, 1, 1);
+  drawGridBlock(doc, layout, titleBlock, "header", widthMm, 1, 1, isDark);
 
   let y = REPORT_MARGIN_MM + layout.headerHeightMm + 4;
 
@@ -404,7 +439,7 @@ export async function renderReportPdf(
       y = REPORT_MARGIN_MM + 6;
     }
 
-    y = drawTableSection(doc, tableDef, td, y, bottomLimit, widthMm - 2 * REPORT_MARGIN_MM);
+    y = drawTableSection(doc, tableDef, td, y, bottomLimit, widthMm - 2 * REPORT_MARGIN_MM, colors);
     y += 6;
   }
 
@@ -412,7 +447,7 @@ export async function renderReportPdf(
   const totalPages = doc.getNumberOfPages();
   for (let p = 1; p <= totalPages; p++) {
     doc.setPage(p);
-    drawGridBlock(doc, layout, titleBlock, "footer", widthMm, p, totalPages);
+    drawGridBlock(doc, layout, titleBlock, "footer", widthMm, p, totalPages, isDark);
   }
 
   doc.save(filename);
