@@ -276,32 +276,49 @@ function drawTableSection(
   };
 
   const drawRow = (row: Record<string, string>, rowIndex: number) => {
-    y += ROW_HEIGHT;
+    const isSubItem = row._isSubItem === "true";
+    const lineHeight = FONT_SIZE * 0.352778 * 1.4; // pt → mm with leading
+
+    // Measure how many lines each cell needs; take the max to set row height
+    doc.setFontSize(FONT_SIZE);
+    let maxLines = 1;
+    for (const col of visCols) {
+      const text = row[col.key] ?? "";
+      const indent = isSubItem && col.key !== "count" ? 4 : 0;
+      const lines = doc.splitTextToSize(text, col.widthMm - indent);
+      if (lines.length > maxLines) maxLines = lines.length;
+    }
+    const dynamicRowHeight = Math.max(ROW_HEIGHT, maxLines * lineHeight + 2);
+
+    y += dynamicRowHeight;
     if (y > bottomLimit) {
       repeatOnNewPage();
-      y += ROW_HEIGHT;
+      y += dynamicRowHeight;
     }
 
-    const rowTop = y - ROW_HEIGHT + 2;
+    const rowTop = y - dynamicRowHeight + 2;
 
     if (rowIndex % 2 === 1) {
       doc.setFillColor(248, 248, 248);
-      doc.rect(tableLeft, rowTop, tableWidth, ROW_HEIGHT, "F");
+      doc.rect(tableLeft, rowTop, tableWidth, dynamicRowHeight, "F");
     }
 
-    const isSubItem = row._isSubItem === "true";
     doc.setTextColor(isSubItem ? 120 : 0);
     let x = REPORT_MARGIN_MM;
     for (const col of visCols) {
       const text = row[col.key] ?? "";
       const indent = isSubItem && col.key !== "count" ? 4 : 0;
-      doc.text(text, x + indent, y, { maxWidth: col.widthMm - indent });
+      const lines = doc.splitTextToSize(text, col.widthMm - indent) as string[];
+      // Draw each wrapped line individually so they stay inside the row bounds
+      lines.forEach((line, li) => {
+        doc.text(line, x + indent, rowTop + lineHeight * (li + 1));
+      });
       x += col.widthMm + COL_GAP;
     }
 
     // Horizontal line under this row
     if (borders === "horizontal" || borders === "grid") {
-      hLine(rowTop + ROW_HEIGHT);
+      hLine(rowTop + dynamicRowHeight);
     }
   };
 
