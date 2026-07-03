@@ -21,6 +21,12 @@
 .dark .text-gray-400 { color: var(--color-text-muted) !important; }
 .dark .text-gray-300 { color: var(--color-border) !important; }
 
+/* Dark mode overrides for arbitrary CSS variable text colors (Tailwind v4 doesn't
+   generate dark: variants for text-[var(--color-*)] arbitrary values) */
+.dark [class~="text-[var(--color-text-heading)]"]  { color: #f1f5f9 !important; }
+.dark [class~="text-[var(--color-text)]"]           { color: #cbd5e1 !important; }
+.dark [class~="text-[var(--color-text-muted)]"]     { color: #94a3b8 !important; }
+
 @font-face {
   font-family: 'Inter';
   font-weight: 400;
