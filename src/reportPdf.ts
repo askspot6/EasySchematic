@@ -282,6 +282,13 @@ function drawTableSection(
     // Close borders on the current page before breaking
     closeBordersAtY(y);
     doc.addPage();
+    // Fill dark background on every new page
+    if (colors.pageBg[0] < 128) {
+      doc.setFillColor(...colors.pageBg);
+      const pw = doc.internal.pageSize.getWidth();
+      const ph = doc.internal.pageSize.getHeight();
+      doc.rect(0, 0, pw, ph, "F");
+    }
     y = REPORT_MARGIN_MM;
     drawSectionTitle(`${tableDef.label} (Cont'd)`);
     drawHeaders();
@@ -436,6 +443,11 @@ export async function renderReportPdf(
 
     if (y > bottomLimit - 20) {
       doc.addPage();
+      // Fill dark background on every new page
+      if (isDark) {
+        doc.setFillColor(...colors.pageBg);
+        doc.rect(0, 0, widthMm, heightMm, "F");
+      }
       y = REPORT_MARGIN_MM + 6;
     }
 
