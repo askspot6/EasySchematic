@@ -95,18 +95,18 @@ export default function PageTabs() {
     `px-3 py-1 rounded-t border border-b-0 whitespace-nowrap transition-colors ${
       isActive
         ? isPrint
-          ? "bg-white border-violet-400 font-semibold text-violet-900"
-          : "bg-white border-neutral-300 font-semibold text-neutral-900"
+          ? "bg-white dark:bg-slate-700 border-violet-400 font-semibold text-violet-900 dark:text-violet-300"
+          : "bg-white dark:bg-slate-700 border-neutral-300 dark:border-slate-500 font-semibold text-neutral-900 dark:text-slate-100"
         : isPrint
-          ? "bg-violet-50 border-transparent text-violet-600 hover:bg-violet-100"
-          : "bg-neutral-200 border-transparent text-neutral-600 hover:bg-neutral-50"
+          ? "bg-violet-50 dark:bg-slate-800 border-transparent text-violet-600 dark:text-violet-400 hover:bg-violet-100 dark:hover:bg-slate-700"
+          : "bg-neutral-200 dark:bg-slate-800 border-transparent text-neutral-600 dark:text-slate-400 hover:bg-neutral-50 dark:hover:bg-slate-700"
     }`;
 
   return (
     <>
       <div
         data-print-hide
-        className="flex items-center gap-0.5 bg-neutral-100 border-b border-neutral-300 px-2 py-0 text-xs select-none overflow-x-auto"
+        className="flex items-center gap-0.5 bg-neutral-100 dark:bg-slate-900 border-b border-neutral-300 dark:border-slate-600 px-2 py-0 text-xs select-none overflow-x-auto"
         style={{ minHeight: 28 }}
       >
         {/* Schematic tab */}
@@ -149,7 +149,7 @@ export default function PageTabs() {
 
         {/* Add rack page */}
         <button
-          className="px-2 py-1 text-neutral-400 hover:text-neutral-700 hover:bg-neutral-200 rounded"
+          className="px-2 py-1 text-neutral-400 dark:text-slate-500 hover:text-neutral-700 dark:hover:text-slate-200 hover:bg-neutral-200 dark:hover:bg-slate-700 rounded"
           onClick={() => addRackPage(`Rack Page ${pages.filter((p) => p.type === "rack-elevation").length + 1}`)}
           title="Add rack elevation page"
         >
@@ -170,26 +170,26 @@ export default function PageTabs() {
       {contextMenu && menuPage && (
         <div
           ref={menuRef}
-          className="fixed z-50 bg-white border border-gray-300 rounded shadow-lg py-1 min-w-[140px] text-xs"
+          className="fixed z-50 bg-white dark:bg-slate-800 border border-gray-300 dark:border-slate-600 rounded shadow-lg py-1 min-w-[140px] text-xs"
           style={{ left: contextMenu.x, top: contextMenu.y }}
           onMouseDown={(e) => e.stopPropagation()}
         >
-          <div className="px-3 py-1 text-[10px] uppercase tracking-wider text-neutral-400 border-b border-neutral-100 mb-1 truncate">
+          <div className="px-3 py-1 text-[10px] uppercase tracking-wider text-neutral-400 dark:text-slate-400 border-b border-neutral-100 dark:border-slate-600 mb-1 truncate">
             {isPrintSheet ? "📄 " : ""}{menuPage.label}
           </div>
           <button
-            className="w-full text-left px-3 py-1.5 text-gray-700 hover:bg-blue-50 hover:text-blue-700 cursor-pointer"
+            className="w-full text-left px-3 py-1.5 text-gray-700 dark:text-slate-200 hover:bg-blue-50 dark:hover:bg-slate-700 hover:text-blue-700 dark:hover:text-blue-300 cursor-pointer"
             onClick={handleRename}
           >
             Rename
           </button>
           <button
-            className="w-full text-left px-3 py-1.5 text-gray-700 hover:bg-blue-50 hover:text-blue-700 cursor-pointer"
+            className="w-full text-left px-3 py-1.5 text-gray-700 dark:text-slate-200 hover:bg-blue-50 dark:hover:bg-slate-700 hover:text-blue-700 dark:hover:text-blue-300 cursor-pointer"
             onClick={handleDuplicate}
           >
             Duplicate
           </button>
-          <div className="border-t border-gray-100 my-1" />
+          <div className="border-t border-gray-100 dark:border-slate-600 my-1" />
           <button
             className="w-full text-left px-3 py-1.5 text-red-600 hover:bg-red-50 hover:text-red-700 cursor-pointer"
             onClick={handleDelete}
