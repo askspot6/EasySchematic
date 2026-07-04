@@ -124,9 +124,12 @@ export const templates: DeviceTemplate[] = [
     weightKg: 27.2,
     referenceUrl: "https://eaw.com/products/mk2326i/",
     ports: [
-      port("LF/HF In", "speaker-level", "input"),
-      port("LF In (Bi-amp)", "speaker-level", "input"),
-      port("HF In (Bi-amp)", "speaker-level", "input"),
+      port("LF/HF In", "speaker-level", "input", "phoenix"),
+      port("LF/HF Loop Out", "speaker-level", "output", "phoenix"),
+      port("LF In (Bi-amp)", "speaker-level", "input", "phoenix"),
+      port("LF Loop Out (Bi-amp)", "speaker-level", "output", "phoenix"),
+      port("HF In (Bi-amp)", "speaker-level", "input", "phoenix"),
+      port("HF Loop Out (Bi-amp)", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -144,9 +147,12 @@ export const templates: DeviceTemplate[] = [
     weightKg: 27.2,
     referenceUrl: "https://eaw.com/products/mk2394i/",
     ports: [
-      port("LF/HF In", "speaker-level", "input"),
-      port("LF In (Bi-amp)", "speaker-level", "input"),
-      port("HF In (Bi-amp)", "speaker-level", "input"),
+      port("LF/HF In", "speaker-level", "input", "phoenix"),
+      port("LF/HF Loop Out", "speaker-level", "output", "phoenix"),
+      port("LF In (Bi-amp)", "speaker-level", "input", "phoenix"),
+      port("LF Loop Out (Bi-amp)", "speaker-level", "output", "phoenix"),
+      port("HF In (Bi-amp)", "speaker-level", "input", "phoenix"),
+      port("HF Loop Out (Bi-amp)", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -164,9 +170,12 @@ export const templates: DeviceTemplate[] = [
     weightKg: 27.2,
     referenceUrl: "https://eaw.com/products/mk2396i/",
     ports: [
-      port("LF/HF In", "speaker-level", "input"),
-      port("LF In (Bi-amp)", "speaker-level", "input"),
-      port("HF In (Bi-amp)", "speaker-level", "input"),
+      port("LF/HF In", "speaker-level", "input", "phoenix"),
+      port("LF/HF Loop Out", "speaker-level", "output", "phoenix"),
+      port("LF In (Bi-amp)", "speaker-level", "input", "phoenix"),
+      port("LF Loop Out (Bi-amp)", "speaker-level", "output", "phoenix"),
+      port("HF In (Bi-amp)", "speaker-level", "input", "phoenix"),
+      port("HF Loop Out (Bi-amp)", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -184,9 +193,12 @@ export const templates: DeviceTemplate[] = [
     weightKg: 36.3,
     referenceUrl: "https://eaw.com/products/mk5326i/",
     ports: [
-      port("LF/HF In", "speaker-level", "input"),
-      port("LF In (Bi-amp)", "speaker-level", "input"),
-      port("HF In (Bi-amp)", "speaker-level", "input"),
+      port("LF/HF In", "speaker-level", "input", "phoenix"),
+      port("LF/HF Loop Out", "speaker-level", "output", "phoenix"),
+      port("LF In (Bi-amp)", "speaker-level", "input", "phoenix"),
+      port("LF Loop Out (Bi-amp)", "speaker-level", "output", "phoenix"),
+      port("HF In (Bi-amp)", "speaker-level", "input", "phoenix"),
+      port("HF Loop Out (Bi-amp)", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -204,9 +216,12 @@ export const templates: DeviceTemplate[] = [
     weightKg: 36.3,
     referenceUrl: "https://eaw.com/products/mk5394i/",
     ports: [
-      port("LF/HF In", "speaker-level", "input"),
-      port("LF In (Bi-amp)", "speaker-level", "input"),
-      port("HF In (Bi-amp)", "speaker-level", "input"),
+      port("LF/HF In", "speaker-level", "input", "phoenix"),
+      port("LF/HF Loop Out", "speaker-level", "output", "phoenix"),
+      port("LF In (Bi-amp)", "speaker-level", "input", "phoenix"),
+      port("LF Loop Out (Bi-amp)", "speaker-level", "output", "phoenix"),
+      port("HF In (Bi-amp)", "speaker-level", "input", "phoenix"),
+      port("HF Loop Out (Bi-amp)", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -224,9 +239,12 @@ export const templates: DeviceTemplate[] = [
     weightKg: 36.3,
     referenceUrl: "https://eaw.com/products/mk5396i/",
     ports: [
-      port("LF/HF In", "speaker-level", "input"),
-      port("LF In (Bi-amp)", "speaker-level", "input"),
-      port("HF In (Bi-amp)", "speaker-level", "input"),
+      port("LF/HF In", "speaker-level", "input", "phoenix"),
+      port("LF/HF Loop Out", "speaker-level", "output", "phoenix"),
+      port("LF In (Bi-amp)", "speaker-level", "input", "phoenix"),
+      port("LF Loop Out (Bi-amp)", "speaker-level", "output", "phoenix"),
+      port("HF In (Bi-amp)", "speaker-level", "input", "phoenix"),
+      port("HF Loop Out (Bi-amp)", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -244,9 +262,12 @@ export const templates: DeviceTemplate[] = [
     weightKg: 36.3,
     referenceUrl: "https://eaw.com/products/mk5399i/",
     ports: [
-      port("LF/HF In", "speaker-level", "input"),
-      port("LF In (Bi-amp)", "speaker-level", "input"),
-      port("HF In (Bi-amp)", "speaker-level", "input"),
+      port("LF/HF In", "speaker-level", "input", "phoenix"),
+      port("LF/HF Loop Out", "speaker-level", "output", "phoenix"),
+      port("LF In (Bi-amp)", "speaker-level", "input", "phoenix"),
+      port("LF Loop Out (Bi-amp)", "speaker-level", "output", "phoenix"),
+      port("HF In (Bi-amp)", "speaker-level", "input", "phoenix"),
+      port("HF Loop Out (Bi-amp)", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -264,9 +285,12 @@ export const templates: DeviceTemplate[] = [
     weightKg: 11.3,
     referenceUrl: "https://eaw.com/products/mk8126i/",
     ports: [
-      port("LF/HF In", "speaker-level", "input"),
-      port("LF In (Bi-amp)", "speaker-level", "input"),
-      port("HF In (Bi-amp)", "speaker-level", "input"),
+      port("LF/HF In", "speaker-level", "input", "phoenix"),
+      port("LF/HF Loop Out", "speaker-level", "output", "phoenix"),
+      port("LF In (Bi-amp)", "speaker-level", "input", "phoenix"),
+      port("LF Loop Out (Bi-amp)", "speaker-level", "output", "phoenix"),
+      port("HF In (Bi-amp)", "speaker-level", "input", "phoenix"),
+      port("HF Loop Out (Bi-amp)", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -286,7 +310,8 @@ export const templates: DeviceTemplate[] = [
     weightKg: 3.3,
     referenceUrl: "https://eaw.com/products/mkc50/",
     ports: [
-      port("Audio In", "speaker-level", "input"),
+      port("Audio In", "speaker-level", "input", "phoenix"),
+      port("Audio Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -304,7 +329,8 @@ export const templates: DeviceTemplate[] = [
     weightKg: 4.9,
     referenceUrl: "https://eaw.com/products/mkc60/",
     ports: [
-      port("Audio In", "speaker-level", "input"),
+      port("Audio In", "speaker-level", "input", "phoenix"),
+      port("Audio Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -319,7 +345,8 @@ export const templates: DeviceTemplate[] = [
     weightKg: 10.0,
     referenceUrl: "https://eaw.com/mkc5060-subseries/",
     ports: [
-      port("Audio In", "speaker-level", "input"),
+      port("Audio In", "speaker-level", "input", "phoenix"),
+      port("Audio Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -339,7 +366,8 @@ export const templates: DeviceTemplate[] = [
     weightKg: 2.8,
     referenceUrl: "https://eaw.com/products/cis300/",
     ports: [
-      port("Audio In", "speaker-level", "input"),
+      port("Audio In", "speaker-level", "input", "phoenix"),
+      port("Audio Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -357,7 +385,8 @@ export const templates: DeviceTemplate[] = [
     weightKg: 3.6,
     referenceUrl: "https://eaw.com/products/cis400/",
     ports: [
-      port("Audio In", "speaker-level", "input"),
+      port("Audio In", "speaker-level", "input", "phoenix"),
+      port("Audio Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -373,7 +402,8 @@ export const templates: DeviceTemplate[] = [
     searchTerms: ["eaw", "sb180", "sb series", "subwoofer", "passive", "18 inch", "sub"],
     referenceUrl: "https://eaw.com/products-series/sb-series/",
     ports: [
-      port("LF In", "speaker-level", "input"),
+      port("LF In", "speaker-level", "input", "phoenix"),
+      port("LF Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -387,7 +417,8 @@ export const templates: DeviceTemplate[] = [
     searchTerms: ["eaw", "sb210", "sb series", "subwoofer", "passive", "10 inch", "compact", "sub"],
     referenceUrl: "https://eaw.com/products-series/sb-series/",
     ports: [
-      port("LF In", "speaker-level", "input"),
+      port("LF In", "speaker-level", "input", "phoenix"),
+      port("LF Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
