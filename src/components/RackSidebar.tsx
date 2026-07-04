@@ -71,7 +71,7 @@ export default function RackSidebar({ page }: RackSidebarProps) {
   }, []);
 
   return (
-    <div className="w-56 bg-white border-r border-neutral-300 flex flex-col text-xs overflow-hidden">
+    <div className="w-56 bg-white dark:bg-slate-900 border-r border-neutral-300 dark:border-slate-600 flex flex-col text-xs overflow-hidden">
       {/* Add Rack section */}
       <div className="p-2 border-b border-neutral-200">
         <button
@@ -84,13 +84,13 @@ export default function RackSidebar({ page }: RackSidebarProps) {
 
       {/* Page totals */}
       {pageStats && (
-        <div className="p-2 border-b border-neutral-200 bg-neutral-50">
-          <div className="font-semibold text-neutral-500 mb-1 uppercase tracking-wider" style={{ fontSize: 9 }}>
+        <div className="p-2 border-b border-neutral-200 dark:border-slate-600 bg-neutral-50 dark:bg-slate-800">
+          <div className="font-semibold text-neutral-500 dark:text-slate-400 mb-1 uppercase tracking-wider" style={{ fontSize: 9 }}>
             Page Totals
           </div>
-          <div className="text-neutral-700 text-[11px] leading-tight">{formatStatsLine(pageStats)}</div>
+          <div className="text-neutral-700 dark:text-slate-300 text-[11px] leading-tight">{formatStatsLine(pageStats)}</div>
           {(pageStats.unknownDepthCount > 0 || pageStats.unknownWeightCount > 0 || pageStats.unknownPowerCount > 0) && (
-            <div className="text-neutral-400 text-[10px] mt-0.5">
+            <div className="text-neutral-400 dark:text-slate-500 text-[10px] mt-0.5">
               {[
                 pageStats.unknownDepthCount > 0 ? `${pageStats.unknownDepthCount} unknown depth` : null,
                 pageStats.unknownWeightCount > 0 ? `${pageStats.unknownWeightCount} unknown weight` : null,
@@ -104,17 +104,17 @@ export default function RackSidebar({ page }: RackSidebarProps) {
       {/* Racks on this page */}
       {page.racks.length > 0 && (
         <div className="p-2 border-b border-neutral-200">
-          <div className="font-semibold text-neutral-500 mb-1 uppercase tracking-wider" style={{ fontSize: 9 }}>
+          <div className="font-semibold text-neutral-500 dark:text-slate-400 mb-1 uppercase tracking-wider" style={{ fontSize: 9 }}>
             Racks
           </div>
           {page.racks.map((rack) => {
             const placementCount = page.placements.filter((p) => p.rackId === rack.id).length;
             const isEditing = editingRackId === rack.id;
             return (
-              <div key={rack.id} className="flex items-center justify-between py-0.5 text-neutral-700 group">
+              <div key={rack.id} className="flex items-center justify-between py-0.5 text-neutral-700 dark:text-slate-300 group">
                 {isEditing ? (
                   <input
-                    className="flex-1 min-w-0 bg-white border border-blue-400 rounded px-1 py-0 text-xs outline-none"
+                    className="flex-1 min-w-0 bg-white dark:bg-slate-700 border border-blue-400 rounded px-1 py-0 text-xs outline-none dark:text-slate-100"
                     value={editingRackLabel}
                     autoFocus
                     onChange={(e) => setEditingRackLabel(e.target.value)}
@@ -149,11 +149,11 @@ export default function RackSidebar({ page }: RackSidebarProps) {
                         →
                       </button>
                       {moveMenuRackId === rack.id && (
-                        <div className="absolute right-0 top-5 z-50 bg-white border border-neutral-200 rounded shadow-lg py-1 min-w-[120px]">
+                        <div className="absolute right-0 top-5 z-50 bg-white dark:bg-slate-800 border border-neutral-200 dark:border-slate-600 rounded shadow-lg py-1 min-w-[120px]">
                           {otherElevationPages.map((p) => (
                             <button
                               key={p.id}
-                              className="w-full text-left px-3 py-1 text-xs text-neutral-700 hover:bg-blue-50 hover:text-blue-700"
+                              className="w-full text-left px-3 py-1 text-xs text-neutral-700 dark:text-slate-200 hover:bg-blue-50 dark:hover:bg-slate-700 hover:text-blue-700"
                               onClick={() => { moveRackToPage(page.id, rack.id, p.id); setMoveMenuRackId(null); }}
                             >
                               {p.label}
@@ -192,7 +192,7 @@ export default function RackSidebar({ page }: RackSidebarProps) {
       <div className="flex-1 overflow-y-auto p-2 flex flex-col gap-2">
         {unrackedDevices.length > 0 && (
           <input
-            className="w-full bg-neutral-50 border border-neutral-200 rounded px-2 py-1 text-xs outline-none focus:border-blue-400"
+            className="w-full bg-neutral-50 dark:bg-slate-800 border border-neutral-200 dark:border-slate-600 rounded px-2 py-1 text-xs outline-none focus:border-blue-400 dark:text-slate-200 dark:placeholder-slate-500"
             placeholder="Search devices…"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
@@ -200,7 +200,7 @@ export default function RackSidebar({ page }: RackSidebarProps) {
           />
         )}
         {unrackedDevices.length === 0 ? (
-          <div className="text-neutral-400 py-2">All devices placed</div>
+          <div className="text-neutral-400 dark:text-slate-500 py-2">All devices placed</div>
         ) : (() => {
           const q = search.trim().toLowerCase();
           const matchesSearch = (node: typeof unrackedDevices[number]) => {
@@ -220,14 +220,14 @@ export default function RackSidebar({ page }: RackSidebarProps) {
             return (
               <div
                 key={node.id}
-                className="flex items-center justify-between px-2 py-1 rounded bg-neutral-50 border border-neutral-200 cursor-grab hover:bg-blue-50 hover:border-blue-300"
+                className="flex items-center justify-between px-2 py-1 rounded bg-neutral-50 dark:bg-slate-700 border border-neutral-200 dark:border-slate-500 cursor-grab hover:bg-blue-50 dark:hover:bg-slate-600 hover:border-blue-300 dark:hover:border-blue-400"
                 draggable
                 onDragStart={(e) => handleDragStart(e, node.id, heightU)}
                 onDragEnd={handleDragEnd}
                 title={needsShelf ? `No height set — drop on a shelf accessory · ${data.label}` : data.label}
               >
-                <span className="truncate">{resolved.text}</span>
-                <span className="text-neutral-400 ml-1 shrink-0">
+                <span className="truncate text-neutral-700 dark:text-slate-100">{resolved.text}</span>
+                <span className="text-neutral-400 dark:text-slate-400 ml-1 shrink-0">
                   {needsShelf ? <span className="text-amber-600" title="needs shelf">⬚</span> : `${heightU}U`}
                 </span>
               </div>
@@ -254,7 +254,7 @@ export default function RackSidebar({ page }: RackSidebarProps) {
             <>
               {groups.map(({ rack, roomLabel, devices }) => (
                 <div key={rack.id}>
-                  <div className="font-semibold text-blue-600 mb-0.5 uppercase tracking-wider" style={{ fontSize: 8 }}>
+                  <div className="font-semibold text-blue-600 dark:text-blue-400 mb-0.5 uppercase tracking-wider" style={{ fontSize: 8 }}>
                     From {roomLabel} → {rack.label} ({devices.length})
                   </div>
                   <div className="flex flex-col gap-0.5">
@@ -264,7 +264,7 @@ export default function RackSidebar({ page }: RackSidebarProps) {
               ))}
               {otherUnracked.length > 0 && (
                 <div>
-                  <div className="font-semibold text-neutral-500 mb-0.5 uppercase tracking-wider" style={{ fontSize: 8 }}>
+                  <div className="font-semibold text-neutral-500 dark:text-slate-400 mb-0.5 uppercase tracking-wider" style={{ fontSize: 8 }}>
                     {groups.length > 0 ? `Other Unracked (${otherUnracked.length})` : `Unracked Devices (${otherUnracked.length})`}
                   </div>
                   <div className="flex flex-col gap-0.5">
