@@ -24,6 +24,7 @@ import { templates as expansionCards } from "./devices/expansion-cards";
 import { templates as storageMedia } from "./devices/storage-media";
 import { templates as tristate } from "./devices/tristate";
 import { templates as symetrix } from "./devices/symetrix";
+import { templates as bss } from "./devices/bss";
 
 import { DEVICE_TYPE_TO_CATEGORY } from "./deviceTypeCategories";
 export { DEVICE_TYPE_TO_CATEGORY };
@@ -52,6 +53,7 @@ export const DEVICE_TEMPLATES: DeviceTemplate[] = [
   ...codecs,
   ...tristate,
   ...symetrix,
+  ...bss,
 ];
 
 export const CARD_TEMPLATES: DeviceTemplate[] = [...expansionCards, ...storageMedia];
