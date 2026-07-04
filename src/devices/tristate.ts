@@ -13,7 +13,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "tristate-cognio-c20",
     deviceType: "audio-dsp",
-    label: "Symetrix Cognio C20",
+    label: "Cognio C20",
     shortName: "Cognio C20",
     manufacturer: "Symetrix",
     modelNumber: "C20",
@@ -40,7 +40,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "tristate-m4350-24x8f8v",
     deviceType: "network-switch",
-    label: "Netgear AVLine M4350-24X8F8V",
+    label: "M4350-24X8F8V",
     shortName: "M4350-24X8F8V",
     manufacturer: "Netgear",
     modelNumber: "XSM4340V",
@@ -64,7 +64,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "tristate-m4250-26g4f-poe",
     deviceType: "network-switch",
-    label: "Netgear AVLine M4250-26G4F-PoE+",
+    label: "M4250-26G4F-PoE+",
     shortName: "M4250-26G4F",
     manufacturer: "Netgear",
     modelNumber: "GSM4230P",
@@ -89,7 +89,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "tristate-e5200",
     deviceType: "av-over-ip",
-    label: "Visionary Solutions E5200",
+    label: "E5200 Encoder",
     shortName: "E5200",
     manufacturer: "Visionary Solutions",
     modelNumber: "E5200",
@@ -114,7 +114,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "tristate-d5200",
     deviceType: "av-over-ip",
-    label: "Visionary Solutions D5200",
+    label: "D5200 Decoder",
     shortName: "D5200",
     manufacturer: "Visionary Solutions",
     modelNumber: "D5200",
@@ -141,7 +141,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "tristate-tesira-server-io",
     deviceType: "audio-dsp",
-    label: "Biamp Tesira SERVER-IO",
+    label: "Tesira SERVER-IO",
     shortName: "Tesira SERVER-IO",
     manufacturer: "Biamp",
     modelNumber: "Tesira SERVER-IO",
@@ -170,7 +170,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "tristate-jbl-control-424lp",
     deviceType: "speaker",
-    label: "JBL Control 424LP",
+    label: "Control 424LP",
     shortName: "Control 424LP",
     manufacturer: "JBL",
     modelNumber: "Control 424LP",
@@ -188,7 +188,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "tristate-eaw-rsx212l",
     deviceType: "speaker",
-    label: "EAW RSX212L",
+    label: "RSX212L",
     shortName: "RSX212L",
     manufacturer: "EAW",
     modelNumber: "RSX212L",
