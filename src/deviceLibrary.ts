@@ -27,6 +27,7 @@ import { templates as symetrix } from "./devices/symetrix";
 import { templates as bss } from "./devices/bss";
 import { templates as eaw } from "./devices/eaw";
 import { templates as crown } from "./devices/crown";
+import { templates as jbl } from "./devices/jbl";
 
 import { DEVICE_TYPE_TO_CATEGORY } from "./deviceTypeCategories";
 export { DEVICE_TYPE_TO_CATEGORY };
@@ -58,6 +59,7 @@ export const DEVICE_TEMPLATES: DeviceTemplate[] = [
   ...bss,
   ...eaw,
   ...crown,
+  ...jbl,
 ];
 
 export const CARD_TEMPLATES: DeviceTemplate[] = [...expansionCards, ...storageMedia];
