@@ -115,7 +115,7 @@ function TemplateItem({
           )}
         </span>
         {template.manufacturer && (
-          <span className="text-[9px] text-[var(--color-text-muted)] opacity-70 truncate">
+          <span className="text-[11px] text-[var(--color-text-muted)] opacity-70 truncate">
             <HighlightedText text={template.manufacturer} query={query} />
           </span>
         )}
@@ -349,7 +349,7 @@ function DraggableTemplateItem({
             <HighlightedText text={template.label} query={query} />
           </span>
           {template.manufacturer && (
-            <span className="text-[9px] text-[var(--color-text-muted)] opacity-70 truncate">
+            <span className="text-[11px] text-[var(--color-text-muted)] opacity-70 truncate">
               <HighlightedText text={template.manufacturer} query={query} />
             </span>
           )}
