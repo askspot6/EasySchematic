@@ -152,7 +152,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0017-4000-8000-000000000023",
     deviceType: "router",
-    label: "Kramer VS-88H2",
+    label: "VS-88H2",
     manufacturer: "Kramer",
     modelNumber: "VS-88H2",
     referenceUrl: "https://www1.kramerav.com/us/product/vs-88h2",
@@ -538,7 +538,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0049-4000-8000-000000000073",
     deviceType: "switcher",
-    label: "Roland V-60HD",
+    label: "V-60HD",
     manufacturer: "Roland",
     modelNumber: "V-60HD",
     referenceUrl: "https://proav.roland.com/global/products/v-60hd/",
@@ -586,7 +586,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-004a-4000-8000-000000000074",
     deviceType: "switcher",
-    label: "Barco E2 Gen 2",
+    label: "E2 Gen 2",
     manufacturer: "Barco",
     modelNumber: "E2 Gen 2",
     referenceUrl: "https://www.barco.com/en/product/e2-gen-2",
@@ -621,7 +621,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-004b-4000-8000-000000000075",
     deviceType: "switcher",
-    label: "Barco S3-4K",
+    label: "S3-4K",
     manufacturer: "Barco",
     modelNumber: "S3-4K",
     referenceUrl: "https://www.barco.com/en/product/s3-4k",
@@ -652,7 +652,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-004c-4000-8000-000000000076",
     deviceType: "switcher",
-    label: "Analog Way Aquilon C",
+    label: "Aquilon C",
     manufacturer: "Analog Way",
     modelNumber: "Aquilon C",
     referenceUrl: "https://www.analogway.com/emea/products/midra-range/aquilon-c/",
@@ -792,7 +792,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0050-4000-8000-000000000080",
     deviceType: "router",
-    label: "Lightware MX2 8x8 HDMI",
+    label: "MX2 8x8 HDMI",
     manufacturer: "Lightware",
     modelNumber: "MX2-8x8-HDMI20",
     referenceUrl: "https://lightware.com/mx2-8x8-hdmi20",
@@ -813,7 +813,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0051-4000-8000-000000000081",
     deviceType: "router",
-    label: "Lightware MX2 16x16 HDMI",
+    label: "MX2 16x16 HDMI",
     manufacturer: "Lightware",
     modelNumber: "MX2-16x16-HDMI20",
     referenceUrl: "https://lightware.com/mx2-16x16-hdmi20",
@@ -835,7 +835,7 @@ export const templates: DeviceTemplate[] = [
     id: "c0a80101-0103-4000-8000-000000000335",
     deviceType: "router",
     category: "routing",
-    label: "AJA KUMO 1616-12G",
+    label: "KUMO 1616-12G",
     manufacturer: "AJA",
     modelNumber: "KUMO 1616-12G",
     referenceUrl: "https://www.aja.com/products/kumo-1616-12g",
@@ -857,7 +857,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0115-4000-8000-000000000353",
     deviceType: "router",
-    label: "Crestron DM-MD8X8-CPU3",
+    label: "DM-MD8X8-CPU3",
     manufacturer: "Crestron",
     modelNumber: "DM-MD8X8-CPU3",
     referenceUrl: "https://www.crestron.com/Products/Video/DigitalMedia-Modular-Matrix/Switcher-Chassis/DM-MD8X8-CPU3",
@@ -889,7 +889,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0116-4000-8000-000000000354",
     deviceType: "router",
-    label: "Crestron DM-MD16X16-CPU3",
+    label: "DM-MD16X16-CPU3",
     manufacturer: "Crestron",
     modelNumber: "DM-MD16X16-CPU3",
     referenceUrl: "https://www.crestron.com/Products/Video/DigitalMedia-Modular-Matrix/Switcher-Chassis/DM-MD16X16-CPU3",
@@ -925,7 +925,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0117-4000-8000-000000000355",
     deviceType: "router",
-    label: "Lightware MX2M-FR24R",
+    label: "MX2M-FR24R",
     manufacturer: "Lightware",
     modelNumber: "MX2M-FR24R",
     referenceUrl: "https://lightware.com/mx2m-fr24r-rf",
@@ -957,7 +957,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0118-4000-8000-000000000356",
     deviceType: "router",
-    label: "Extron DTP CrossPoint 84 4K",
+    label: "DTP CrossPoint 84 4K",
     manufacturer: "Extron",
     modelNumber: "DTP CrossPoint 84 4K",
     referenceUrl: "https://www.extron.com/product/dtpcp4k84",
@@ -979,7 +979,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0119-4000-8000-000000000357",
     deviceType: "router",
-    label: "Extron DTP CrossPoint 108 4K",
+    label: "DTP CrossPoint 108 4K",
     manufacturer: "Extron",
     modelNumber: "DTP CrossPoint 108 4K",
     referenceUrl: "https://www.extron.com/product/dtpcp4k108",
@@ -1182,7 +1182,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-016d-4000-8000-000000000365",
     deviceType: "router",
-    label: "AJA KUMO 3232-12G",
+    label: "KUMO 3232-12G",
     manufacturer: "AJA",
     modelNumber: "KUMO 3232-12G",
     referenceUrl: "https://www.aja.com/products/kumo-3232-12g",
@@ -1203,7 +1203,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-016e-4000-8000-000000000366",
     deviceType: "control-processor",
-    label: "AJA KUMO CP",
+    label: "KUMO CP",
     manufacturer: "AJA",
     modelNumber: "KUMO CP",
     referenceUrl: "https://www.aja.com/products/kumo-cp",
@@ -1222,7 +1222,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-016f-4000-8000-000000000367",
     deviceType: "control-processor",
-    label: "AJA KUMO CP2",
+    label: "KUMO CP2",
     manufacturer: "AJA",
     modelNumber: "KUMO CP2",
     referenceUrl: "https://www.aja.com/products/kumo-cp2",
@@ -1274,7 +1274,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0171-4000-8000-000000000369",
     deviceType: "router",
-    label: "Lightware MX2-24x24-HDMI20",
+    label: "MX2-24x24-HDMI20",
     manufacturer: "Lightware",
     modelNumber: "MX2-24x24-HDMI20",
     referenceUrl: "https://lightware.com/mx2-24x24-hdmi20",
@@ -1304,7 +1304,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0172-4000-8000-000000000370",
     deviceType: "switcher",
-    label: "Analog Way Aquilon RS6",
+    label: "Aquilon RS6",
     manufacturer: "Analog Way",
     modelNumber: "Aquilon RS6",
     referenceUrl: "https://www.analogway.com/products/aquilon-rs6",
@@ -1382,7 +1382,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0173-4000-8000-000000000371",
     deviceType: "control-processor",
-    label: "Analog Way RC400T",
+    label: "RC400T",
     manufacturer: "Analog Way",
     modelNumber: "RC400T",
     referenceUrl: "https://www.analogway.com/products/rc400t",

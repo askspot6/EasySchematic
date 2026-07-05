@@ -6,7 +6,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00f5-4000-8000-000000000321",
     deviceType: "cloud-service",
-    label: "AWS MediaConnect",
+    label: "MediaConnect",
     manufacturer: "AWS",
     modelNumber: "Elemental MediaConnect",
     referenceUrl: "https://docs.aws.amazon.com/mediaconnect/latest/ug/protocols.html",
@@ -26,7 +26,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00f6-4000-8000-000000000322",
     deviceType: "cloud-service",
-    label: "AWS MediaLive",
+    label: "MediaLive",
     manufacturer: "AWS",
     modelNumber: "Elemental MediaLive",
     referenceUrl: "https://docs.aws.amazon.com/medialive/latest/ug/how-medialive-works-channels.html",
@@ -46,7 +46,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00f7-4000-8000-000000000323",
     deviceType: "cloud-service",
-    label: "AWS MediaPackage",
+    label: "MediaPackage",
     manufacturer: "AWS",
     modelNumber: "Elemental MediaPackage",
     referenceUrl: "https://docs.aws.amazon.com/mediapackage/latest/ug/what-is-features.html",

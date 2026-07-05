@@ -26,7 +26,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00a8-4000-8000-000000000168",
     deviceType: "speaker",
-    label: "L'Acoustics KIVA II",
+    label: "KIVA II",
     manufacturer: "L'Acoustics",
     modelNumber: "KIVA II",
     referenceUrl: "https://www.l-acoustics.com/products/kiva-ii/",
@@ -100,7 +100,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00ac-4000-8000-000000000172",
     deviceType: "speaker",
-    label: "QSC K12.2",
+    label: "K12.2",
     manufacturer: "QSC",
     modelNumber: "K12.2",
     referenceUrl: "https://www.qsc.com/products-solutions/loudspeakers/powered-loudspeakers/k2-series/k122/",
@@ -140,7 +140,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00ae-4000-8000-000000000174",
     deviceType: "speaker",
-    label: "L'Acoustics SB15m",
+    label: "SB15m",
     manufacturer: "L'Acoustics",
     modelNumber: "SB15m",
     referenceUrl: "https://www.l-acoustics.com/products/sb15m/",
@@ -177,7 +177,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00b0-4000-8000-000000000176",
     deviceType: "amplifier",
-    label: "QSC PLD 4.5",
+    label: "PLD 4.5",
     manufacturer: "QSC",
     modelNumber: "PLD 4.5",
     referenceUrl: "https://www.qsc.com/products-solutions/power-amplifiers/installed/pld-series/pld-4-5/",
@@ -199,7 +199,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00b1-4000-8000-000000000177",
     deviceType: "amplifier",
-    label: "L'Acoustics LA4X",
+    label: "LA4X",
     manufacturer: "L'Acoustics",
     modelNumber: "LA4X",
     referenceUrl: "https://www.l-acoustics.com/products/la4x/",
@@ -227,7 +227,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01c3-4000-8000-000000000451",
     deviceType: "speaker",
-    label: "L'Acoustics A15 Wide",
+    label: "A15 Wide",
     manufacturer: "L'Acoustics",
     modelNumber: "A15 Wide",
     referenceUrl: "https://www.l-acoustics.com/products/a15-wide/",
@@ -241,7 +241,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01c4-4000-8000-000000000452",
     deviceType: "speaker",
-    label: "L'Acoustics K3",
+    label: "K3",
     manufacturer: "L'Acoustics",
     modelNumber: "K3",
     referenceUrl: "https://www.l-acoustics.com/products/k3/",
@@ -259,7 +259,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01c5-4000-8000-000000000453",
     deviceType: "speaker",
-    label: "L'Acoustics SYVA",
+    label: "SYVA",
     manufacturer: "L'Acoustics",
     modelNumber: "SYVA",
     referenceUrl: "https://www.l-acoustics.com/products/syva/",
@@ -277,7 +277,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01c6-4000-8000-000000000454",
     deviceType: "speaker",
-    label: "L'Acoustics X15 HiQ",
+    label: "X15 HiQ",
     manufacturer: "L'Acoustics",
     modelNumber: "X15 HiQ",
     referenceUrl: "https://www.l-acoustics.com/products/x15-hiq/",
@@ -295,7 +295,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01c7-4000-8000-000000000455",
     deviceType: "speaker",
-    label: "L'Acoustics X8",
+    label: "X8",
     manufacturer: "L'Acoustics",
     modelNumber: "X8",
     referenceUrl: "https://www.l-acoustics.com/products/x8/",
@@ -313,7 +313,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01c8-4000-8000-000000000456",
     deviceType: "speaker",
-    label: "L'Acoustics X12",
+    label: "X12",
     manufacturer: "L'Acoustics",
     modelNumber: "X12",
     referenceUrl: "https://www.l-acoustics.com/products/x12/",
@@ -331,7 +331,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01c9-4000-8000-000000000457",
     deviceType: "speaker",
-    label: "L'Acoustics KS28",
+    label: "KS28",
     manufacturer: "L'Acoustics",
     modelNumber: "KS28",
     referenceUrl: "https://www.l-acoustics.com/products/ks28/",
@@ -348,7 +348,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01ca-4000-8000-000000000458",
     deviceType: "speaker",
-    label: "L'Acoustics K2",
+    label: "K2",
     manufacturer: "L'Acoustics",
     modelNumber: "K2",
     referenceUrl: "https://www.l-acoustics.com/products/k2/",
@@ -366,7 +366,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01cb-4000-8000-000000000459",
     deviceType: "speaker",
-    label: "L'Acoustics Kara II",
+    label: "Kara II",
     manufacturer: "L'Acoustics",
     modelNumber: "Kara II",
     referenceUrl: "https://www.l-acoustics.com/products/kara-ii/",
@@ -384,7 +384,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01cc-4000-8000-000000000460",
     deviceType: "speaker",
-    label: "L'Acoustics 5XT",
+    label: "5XT",
     manufacturer: "L'Acoustics",
     modelNumber: "5XT",
     referenceUrl: "https://www.l-acoustics.com/products/5xt/",
@@ -402,7 +402,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01cd-4000-8000-000000000461",
     deviceType: "speaker",
-    label: "L'Acoustics SB18",
+    label: "SB18",
     manufacturer: "L'Acoustics",
     modelNumber: "SB18",
     referenceUrl: "https://www.l-acoustics.com/products/sb18/",
@@ -422,7 +422,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01ce-4000-8000-000000000462",
     deviceType: "amplifier",
-    label: "L'Acoustics LA7.16",
+    label: "LA7.16",
     manufacturer: "L'Acoustics",
     modelNumber: "LA7.16",
     referenceUrl: "https://www.l-acoustics.com/products/la7-16/",
@@ -444,7 +444,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01cf-4000-8000-000000000463",
     deviceType: "amplifier",
-    label: "L'Acoustics LA-RAK II",
+    label: "LA-RAK II",
     manufacturer: "L'Acoustics",
     modelNumber: "LA-RAK II AVB",
     referenceUrl: "https://www.l-acoustics.com/products/la-rak-ii-avb/",
@@ -800,7 +800,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01e1-4000-8000-000000000481",
     deviceType: "speaker",
-    label: "Fostex 6301B",
+    label: "6301B",
     manufacturer: "Fostex",
     modelNumber: "6301B",
     referenceUrl: "https://www.fostex.jp/en/products/6301b-h/",

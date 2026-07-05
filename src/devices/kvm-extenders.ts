@@ -6,7 +6,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-002b-4000-8000-000000000043",
     deviceType: "kvm-extender",
-    label: "Adder XDIP",
+    label: "XDIP",
     manufacturer: "Adder",
     modelNumber: "XDIP",
     referenceUrl: "https://www.adder.com/en/kvm-solutions/adderlink-xdip",
@@ -34,7 +34,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-002c-4000-8000-000000000044",
     deviceType: "hdbaset-extender",
-    label: "Extron DTP T HD2 4K",
+    label: "DTP T HD2 4K",
     manufacturer: "Extron",
     modelNumber: "DTP T HD2 4K 230",
     referenceUrl: "https://www.extron.com/product/dtpthd24k230",
@@ -56,7 +56,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-002d-4000-8000-000000000045",
     deviceType: "hdbaset-extender",
-    label: "Extron DTP R HD2 4K",
+    label: "DTP R HD2 4K",
     manufacturer: "Extron",
     modelNumber: "DTP R HD2 4K 230",
     referenceUrl: "https://www.extron.com/product/dtphdmi230rx",

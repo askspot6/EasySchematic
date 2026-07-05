@@ -7,6 +7,12 @@ import type { DeviceTemplate } from "../types";
  * Source: jblpro.com datasheets, verified July 2026.
  * Excluded per Tri-State preference: VTX, SRX, PRX, EON (touring/portable).
  * Control 424LP already in tristate.ts — not duplicated here.
+ *
+ * Connector rules:
+ * - AWC, AM, ASB series: NL4 + barrier strip, both with loop-through
+ * - CBT series: barrier strip IN only, no loop-through
+ * - All Control ceiling and CSS series: barrier strip in + loop-through
+ * - Control 29AV-1, Control 30: barrier strip in + loop-through (daisy chain common in field)
  */
 export const templates: DeviceTemplate[] = [
 
@@ -19,7 +25,7 @@ export const templates: DeviceTemplate[] = [
     shortName: "CBT 50LA-1",
     manufacturer: "JBL",
     modelNumber: "CBT 50LA-1",
-    searchTerms: ["jbl", "cbt", "50la", "column", "install", "70v", "constant beamwidth", "cbt50"],
+    searchTerms: ["jbl", "cbt", "50la", "column", "install", "70v", "constant beamwidth"],
     heightMm: 528,
     widthMm: 99,
     depthMm: 153,
@@ -27,7 +33,6 @@ export const templates: DeviceTemplate[] = [
     referenceUrl: "https://jblpro.com/en-US/products/cbt-50la-1",
     ports: [
       port("Audio In", "speaker-level", "input", "phoenix"),
-      port("Audio Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -46,7 +51,6 @@ export const templates: DeviceTemplate[] = [
     referenceUrl: "https://jblpro.com/en-US/products/cbt-70j-1",
     ports: [
       port("Audio In", "speaker-level", "input", "phoenix"),
-      port("Audio Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -65,7 +69,6 @@ export const templates: DeviceTemplate[] = [
     referenceUrl: "https://jblpro.com/en-US/products/cbt-70je-1",
     ports: [
       port("Audio In", "speaker-level", "input", "phoenix"),
-      port("Audio Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -76,7 +79,7 @@ export const templates: DeviceTemplate[] = [
     shortName: "CBT 100LA-1",
     manufacturer: "JBL",
     modelNumber: "CBT 100LA-1",
-    searchTerms: ["jbl", "cbt", "100la", "column", "install", "70v", "constant beamwidth", "cbt100"],
+    searchTerms: ["jbl", "cbt", "100la", "column", "install", "70v", "constant beamwidth"],
     heightMm: 1000,
     widthMm: 98.5,
     depthMm: 153,
@@ -84,7 +87,6 @@ export const templates: DeviceTemplate[] = [
     referenceUrl: "https://jblpro.com/en-US/products/cbt-100la-1",
     ports: [
       port("Audio In", "speaker-level", "input", "phoenix"),
-      port("Audio Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -103,7 +105,6 @@ export const templates: DeviceTemplate[] = [
     referenceUrl: "https://jblpro.com/en-US/products/cbt-1000",
     ports: [
       port("Audio In", "speaker-level", "input", "phoenix"),
-      port("Audio Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -122,11 +123,10 @@ export const templates: DeviceTemplate[] = [
     referenceUrl: "https://jblpro.com/en-US/products/cbt-1000e",
     ports: [
       port("Audio In (from CBT 1000)", "speaker-level", "input", "phoenix"),
-      port("Audio Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
-  // ─── AWC ALL-WEATHER SERIES ───────────────────────────────────────────────────
+  // ─── AWC ALL-WEATHER SERIES — NL4 + Barrier, in + loop ───────────────────────
 
   {
     id: "jbl-awc129",
@@ -142,8 +142,10 @@ export const templates: DeviceTemplate[] = [
     weightKg: 19.5,
     referenceUrl: "https://jblpro.com/en-US/products/awc129",
     ports: [
-      port("Audio In", "speaker-level", "input", "phoenix"),
-      port("Audio Loop Out", "speaker-level", "output", "phoenix"),
+      port("NL4 In", "speaker-level", "input", "speakon"),
+      port("Barrier In", "speaker-level", "input", "phoenix"),
+      port("NL4 Loop Out", "speaker-level", "output", "speakon"),
+      port("Barrier Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -161,8 +163,10 @@ export const templates: DeviceTemplate[] = [
     weightKg: 24.5,
     referenceUrl: "https://jblpro.com/en-US/products/awc159",
     ports: [
-      port("Audio In", "speaker-level", "input", "phoenix"),
-      port("Audio Loop Out", "speaker-level", "output", "phoenix"),
+      port("NL4 In", "speaker-level", "input", "speakon"),
+      port("Barrier In", "speaker-level", "input", "phoenix"),
+      port("NL4 Loop Out", "speaker-level", "output", "speakon"),
+      port("Barrier Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -180,12 +184,14 @@ export const templates: DeviceTemplate[] = [
     weightKg: 20.2,
     referenceUrl: "https://jblpro.com/en-US/products/awc15lf",
     ports: [
-      port("LF In", "speaker-level", "input", "phoenix"),
-      port("LF Loop Out", "speaker-level", "output", "phoenix"),
+      port("NL4 In", "speaker-level", "input", "speakon"),
+      port("Barrier In", "speaker-level", "input", "phoenix"),
+      port("NL4 Loop Out", "speaker-level", "output", "speakon"),
+      port("Barrier Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
-  // ─── CONTROL SERIES — SURFACE MOUNT ──────────────────────────────────────────
+  // ─── CONTROL SERIES — SURFACE MOUNT — Barrier in + loop ──────────────────────
 
   {
     id: "jbl-control-29av-1",
@@ -214,10 +220,10 @@ export const templates: DeviceTemplate[] = [
     manufacturer: "JBL",
     modelNumber: "Control 30",
     searchTerms: ["jbl", "control", "30", "10 inch", "3-way", "install", "70v", "outdoor", "surface mount"],
-    heightMm: 457,
-    widthMm: 305,
-    depthMm: 287,
-    weightKg: 14.1,
+    heightMm: 593,
+    widthMm: 372,
+    depthMm: 345,
+    weightKg: 18.9,
     referenceUrl: "https://jblpro.com/en-US/products/control-30",
     ports: [
       port("Audio In", "speaker-level", "input", "phoenix"),
@@ -225,7 +231,7 @@ export const templates: DeviceTemplate[] = [
     ],
   },
 
-  // ─── CONTROL SERIES — CEILING (CONTRACTOR/INSTALL) ───────────────────────────
+  // ─── CONTROL SERIES — CEILING — Barrier in + loop ────────────────────────────
 
   {
     id: "jbl-control-24ct",
@@ -313,12 +319,12 @@ export const templates: DeviceTemplate[] = [
     searchTerms: ["jbl", "control", "42c", "2.5 inch", "ceiling", "satellite", "install", "compact"],
     referenceUrl: "https://jblpro.com/en-US/products/control-42c",
     ports: [
-      port("Audio In (from 40CS/T)", "speaker-level", "input", "phoenix"),
+      port("Audio In", "speaker-level", "input", "phoenix"),
       port("Audio Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
-  // ─── CONTROL 400 SERIES — ENHANCED COVERAGE ──────────────────────────────────
+  // ─── CONTROL 400 SERIES ───────────────────────────────────────────────────────
 
   {
     id: "jbl-control-424ct",
@@ -370,7 +376,7 @@ export const templates: DeviceTemplate[] = [
   },
 
   {
-    id: "jbl-control-328ct",
+    id: "jbl-control-328c",
     deviceType: "speaker",
     label: "Control 328C",
     shortName: "Control 328C",
@@ -384,7 +390,7 @@ export const templates: DeviceTemplate[] = [
     ],
   },
 
-  // ─── CSS SERIES — COMMERCIAL CEILING ─────────────────────────────────────────
+  // ─── CSS SERIES — COMMERCIAL CEILING — Barrier in + loop ─────────────────────
 
   {
     id: "jbl-css8004",
@@ -431,7 +437,7 @@ export const templates: DeviceTemplate[] = [
     ],
   },
 
-  // ─── AM SERIES — POINT SOURCE INSTALL ────────────────────────────────────────
+  // ─── AM SERIES — NL4 + Barrier, in + loop ────────────────────────────────────
 
   {
     id: "jbl-am5212",
@@ -447,9 +453,10 @@ export const templates: DeviceTemplate[] = [
     weightKg: 20.2,
     referenceUrl: "https://jblpro.com/en-US/products/am5212-00",
     ports: [
-      port("LF/HF In", "speaker-level", "input", "phoenix"),
-      port("LF In (Bi-amp)", "speaker-level", "input", "phoenix"),
-      port("HF In (Bi-amp)", "speaker-level", "input", "phoenix"),
+      port("NL4 In", "speaker-level", "input", "speakon"),
+      port("Barrier In", "speaker-level", "input", "phoenix"),
+      port("NL4 Loop Out", "speaker-level", "output", "speakon"),
+      port("Barrier Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -467,9 +474,10 @@ export const templates: DeviceTemplate[] = [
     weightKg: 25.0,
     referenceUrl: "https://jblpro.com/en-US/products/am5215-95",
     ports: [
-      port("LF/HF In", "speaker-level", "input", "phoenix"),
-      port("LF In (Bi-amp)", "speaker-level", "input", "phoenix"),
-      port("HF In (Bi-amp)", "speaker-level", "input", "phoenix"),
+      port("NL4 In", "speaker-level", "input", "speakon"),
+      port("Barrier In", "speaker-level", "input", "phoenix"),
+      port("NL4 Loop Out", "speaker-level", "output", "speakon"),
+      port("Barrier Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -487,9 +495,10 @@ export const templates: DeviceTemplate[] = [
     weightKg: 23.1,
     referenceUrl: "https://jblpro.com/en-US/products/am7212-00",
     ports: [
-      port("LF/HF In", "speaker-level", "input", "phoenix"),
-      port("LF In (Bi-amp)", "speaker-level", "input", "phoenix"),
-      port("HF In (Bi-amp)", "speaker-level", "input", "phoenix"),
+      port("NL4 In", "speaker-level", "input", "speakon"),
+      port("Barrier In", "speaker-level", "input", "phoenix"),
+      port("NL4 Loop Out", "speaker-level", "output", "speakon"),
+      port("Barrier Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -507,13 +516,14 @@ export const templates: DeviceTemplate[] = [
     weightKg: 27.7,
     referenceUrl: "https://jblpro.com/en-US/products/am7215-26",
     ports: [
-      port("LF/HF In", "speaker-level", "input", "phoenix"),
-      port("LF In (Bi-amp)", "speaker-level", "input", "phoenix"),
-      port("HF In (Bi-amp)", "speaker-level", "input", "phoenix"),
+      port("NL4 In", "speaker-level", "input", "speakon"),
+      port("Barrier In", "speaker-level", "input", "phoenix"),
+      port("NL4 Loop Out", "speaker-level", "output", "speakon"),
+      port("Barrier Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
-  // ─── ASB SERIES — INSTALL SUBWOOFERS ─────────────────────────────────────────
+  // ─── ASB SERIES — NL4 + Barrier, in + loop ───────────────────────────────────
 
   {
     id: "jbl-asb6112",
@@ -525,8 +535,10 @@ export const templates: DeviceTemplate[] = [
     searchTerms: ["jbl", "asb6112", "12 inch", "subwoofer", "install", "passive", "ae series"],
     referenceUrl: "https://jblpro.com/en-US/products/asb6112",
     ports: [
-      port("LF In", "speaker-level", "input", "phoenix"),
-      port("LF Loop Out", "speaker-level", "output", "phoenix"),
+      port("NL4 In", "speaker-level", "input", "speakon"),
+      port("Barrier In", "speaker-level", "input", "phoenix"),
+      port("NL4 Loop Out", "speaker-level", "output", "speakon"),
+      port("Barrier Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -540,8 +552,10 @@ export const templates: DeviceTemplate[] = [
     searchTerms: ["jbl", "asb6115", "15 inch", "subwoofer", "install", "passive", "ae series"],
     referenceUrl: "https://jblpro.com/en-US/products/asb6115",
     ports: [
-      port("LF In", "speaker-level", "input", "phoenix"),
-      port("LF Loop Out", "speaker-level", "output", "phoenix"),
+      port("NL4 In", "speaker-level", "input", "speakon"),
+      port("Barrier In", "speaker-level", "input", "phoenix"),
+      port("NL4 Loop Out", "speaker-level", "output", "speakon"),
+      port("Barrier Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -555,8 +569,10 @@ export const templates: DeviceTemplate[] = [
     searchTerms: ["jbl", "asb6118", "18 inch", "subwoofer", "install", "passive", "ae series"],
     referenceUrl: "https://jblpro.com/en-US/products/asb6118",
     ports: [
-      port("LF In", "speaker-level", "input", "phoenix"),
-      port("LF Loop Out", "speaker-level", "output", "phoenix"),
+      port("NL4 In", "speaker-level", "input", "speakon"),
+      port("Barrier In", "speaker-level", "input", "phoenix"),
+      port("NL4 Loop Out", "speaker-level", "output", "speakon"),
+      port("Barrier Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -570,8 +586,10 @@ export const templates: DeviceTemplate[] = [
     searchTerms: ["jbl", "asb6125", "dual 15 inch", "subwoofer", "install", "passive", "ae series"],
     referenceUrl: "https://jblpro.com/en-US/products/asb6125",
     ports: [
-      port("LF In", "speaker-level", "input", "phoenix"),
-      port("LF Loop Out", "speaker-level", "output", "phoenix"),
+      port("NL4 In", "speaker-level", "input", "speakon"),
+      port("Barrier In", "speaker-level", "input", "phoenix"),
+      port("NL4 Loop Out", "speaker-level", "output", "speakon"),
+      port("Barrier Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 
@@ -585,8 +603,10 @@ export const templates: DeviceTemplate[] = [
     searchTerms: ["jbl", "asb6128", "dual 18 inch", "subwoofer", "install", "passive", "ae series"],
     referenceUrl: "https://jblpro.com/en-US/products/asb6128",
     ports: [
-      port("LF In", "speaker-level", "input", "phoenix"),
-      port("LF Loop Out", "speaker-level", "output", "phoenix"),
+      port("NL4 In", "speaker-level", "input", "speakon"),
+      port("Barrier In", "speaker-level", "input", "phoenix"),
+      port("NL4 Loop Out", "speaker-level", "output", "speakon"),
+      port("Barrier Loop Out", "speaker-level", "output", "phoenix"),
     ],
   },
 

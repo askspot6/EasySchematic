@@ -7,7 +7,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0038-4000-8000-000000000056",
     deviceType: "control-processor",
-    label: "Crestron CP4N",
+    label: "CP4N",
     manufacturer: "Crestron",
     modelNumber: "CP4N",
     referenceUrl: "https://www.crestron.com/Products/Catalog/Control-and-Management/Control-System/Rack-Mount/CP4N",
@@ -56,7 +56,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00cf-4000-8000-000000000207",
     deviceType: "control-processor",
-    label: "D'San Perfect Cue",
+    label: "Perfect Cue",
     manufacturer: "D'San",
     modelNumber: "Perfect Cue",
     referenceUrl: "https://dsanproducts.com/",

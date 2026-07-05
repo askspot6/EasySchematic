@@ -7,7 +7,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-002e-4000-8000-000000000046",
     deviceType: "wireless-video",
-    label: "Teradek Bolt 4K TX",
+    label: "Bolt 4K TX",
     manufacturer: "Teradek",
     modelNumber: "Bolt 4K 750 TX",
     referenceUrl: "https://teradek.com/products/bolt-4k-750-set",
@@ -28,7 +28,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-002f-4000-8000-000000000047",
     deviceType: "wireless-video",
-    label: "Teradek Bolt 4K RX",
+    label: "Bolt 4K RX",
     manufacturer: "Teradek",
     modelNumber: "Bolt 4K 750 RX",
     referenceUrl: "https://teradek.com/products/bolt-4k-750-rx-only",
@@ -78,7 +78,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-007a-4000-8000-000000000122",
     deviceType: "wireless-video",
-    label: "Teradek Bolt 4K MAX TX",
+    label: "Bolt 4K MAX TX",
     manufacturer: "Teradek",
     modelNumber: "Bolt 4K MAX TX",
     referenceUrl: "https://teradek.com/products/bolt-4k-max",
@@ -98,7 +98,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-007b-4000-8000-000000000123",
     deviceType: "wireless-video",
-    label: "Teradek Bolt 4K MAX RX",
+    label: "Bolt 4K MAX RX",
     manufacturer: "Teradek",
     modelNumber: "Bolt 4K MAX RX",
     referenceUrl: "https://teradek.com/products/bolt-4k-max",
@@ -119,7 +119,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00a3-4000-8000-000000000163",
     deviceType: "intercom",
-    label: "Riedel Artist",
+    label: "Artist",
     manufacturer: "Riedel",
     modelNumber: "Artist",
     referenceUrl: "https://www.riedel.net/products-solutions/intercom/artist/",
@@ -142,7 +142,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00a4-4000-8000-000000000164",
     deviceType: "intercom",
-    label: "Riedel Bolero",
+    label: "Bolero",
     manufacturer: "Riedel",
     modelNumber: "Bolero",
     referenceUrl: "https://www.riedel.net/products-solutions/intercom/bolero/",
@@ -162,7 +162,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00a5-4000-8000-000000000165",
     deviceType: "intercom",
-    label: "Clear-Com Eclipse HX",
+    label: "Eclipse HX",
     manufacturer: "Clear-Com",
     modelNumber: "Eclipse HX",
     referenceUrl: "https://www.clearcom.com/Products/Products-By-Name/Station-IC/eclipse-hx-median",
@@ -183,7 +183,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00a6-4000-8000-000000000166",
     deviceType: "intercom",
-    label: "Clear-Com FreeSpeak Edge",
+    label: "FreeSpeak Edge",
     manufacturer: "Clear-Com",
     modelNumber: "FreeSpeak Edge",
     referenceUrl: "https://www.clearcom.com/Products/Products-By-Name/Wireless/FreeSpeak-Edge",

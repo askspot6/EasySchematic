@@ -689,7 +689,7 @@ export const templates: DeviceTemplate[] = [
     id: "zoom-bta1",
     deviceType: "expansion-card",
     slotFamily: "zoom-bta-port",
-    label: "Zoom BTA-1 Bluetooth Adapter",
+    label: "BTA-1 Bluetooth Adapter",
     manufacturer: "Zoom",
     modelNumber: "BTA-1",
     referenceUrl: "https://zoomcorp.com/en/us/accessories/power-accessories/BTA-1/",

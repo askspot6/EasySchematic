@@ -70,7 +70,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0068-4000-8000-000000000104",
     deviceType: "recorder",
-    label: "Atomos Shogun Ultra",
+    label: "Shogun Ultra",
     manufacturer: "Atomos",
     modelNumber: "Shogun Ultra",
     referenceUrl: "https://www.atomos.com/products/shogun-ultra",
@@ -101,7 +101,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0069-4000-8000-000000000105",
     deviceType: "recorder",
-    label: "Atomos Ninja V",
+    label: "Ninja V",
     manufacturer: "Atomos",
     modelNumber: "Ninja V",
     referenceUrl: "https://www.atomos.com/products/ninja-v",
@@ -230,7 +230,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-006d-4000-8000-000000000109",
     deviceType: "recorder",
-    label: "AJA Ki Pro Ultra 12G",
+    label: "Ki Pro Ultra 12G",
     manufacturer: "AJA",
     modelNumber: "Ki Pro Ultra 12G",
     referenceUrl: "https://www.aja.com/products/ki-pro-ultra-12g",
@@ -261,7 +261,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-006e-4000-8000-000000000110",
     deviceType: "recorder",
-    label: "Sound Devices PIX 270i",
+    label: "PIX 270i",
     manufacturer: "Sound Devices",
     modelNumber: "PIX 270i",
     referenceUrl: "https://www.sounddevices.com/product/pix-270i/",
@@ -344,7 +344,7 @@ export const templates: DeviceTemplate[] = [
     id: "c0a80101-0101-4000-8000-000000000333",
     deviceType: "recorder",
     category: "recorders",
-    label: "Atomos Ninja Ultra",
+    label: "Ninja Ultra",
     manufacturer: "Atomos",
     modelNumber: "Ninja Ultra",
     referenceUrl: "https://www.atomos.com/product/ninja-ultra/",
@@ -367,7 +367,7 @@ export const templates: DeviceTemplate[] = [
     id: "c0a80101-0192-4000-8000-000000000402",
     deviceType: "recorder",
     category: "recorders",
-    label: "AJA Ki Pro GO2",
+    label: "Ki Pro GO2",
     manufacturer: "AJA",
     modelNumber: "Ki Pro GO2",
     referenceUrl: "https://www.aja.com/products/ki-pro-go2",

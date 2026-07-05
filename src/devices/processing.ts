@@ -88,7 +88,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-000a-4000-8000-000000000010",
     deviceType: "converter",
-    label: "AJA FiDO-4T",
+    label: "FiDO-4T",
     manufacturer: "AJA",
     modelNumber: "FiDO-4T",
     referenceUrl: "https://www.aja.com/products/fido-4t",
@@ -113,7 +113,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-000b-4000-8000-000000000011",
     deviceType: "converter",
-    label: "AJA FiDO-4R",
+    label: "FiDO-4R",
     manufacturer: "AJA",
     modelNumber: "FiDO-4R",
     referenceUrl: "https://www.aja.com/products/fido-4r",
@@ -138,7 +138,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-000c-4000-8000-000000000012",
     deviceType: "converter",
-    label: "AJA FiDO-T",
+    label: "FiDO-T",
     manufacturer: "AJA",
     modelNumber: "FiDO-T",
     referenceUrl: "https://www.aja.com/products/fido-t",
@@ -158,7 +158,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-000d-4000-8000-000000000013",
     deviceType: "converter",
-    label: "AJA FiDO-R",
+    label: "FiDO-R",
     manufacturer: "AJA",
     modelNumber: "FiDO-R",
     referenceUrl: "https://www.aja.com/products/fido-r",
@@ -178,7 +178,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-000e-4000-8000-000000000014",
     deviceType: "converter",
-    label: "Datavideo DAC-70",
+    label: "DAC-70",
     manufacturer: "Datavideo",
     modelNumber: "DAC-70",
     referenceUrl: "https://www.datavideo.com/us/product/DAC-70",
@@ -229,7 +229,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0010-4000-8000-000000000016",
     deviceType: "scaler",
-    label: "Extron DSC 301 HD",
+    label: "DSC 301 HD",
     manufacturer: "Extron",
     modelNumber: "DSC 301 HD",
     referenceUrl: "https://www.extron.com/product/dsc301hd",
@@ -444,7 +444,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0059-4000-8000-000000000089",
     deviceType: "converter",
-    label: "AJA Hi5-12G",
+    label: "Hi5-12G",
     manufacturer: "AJA",
     modelNumber: "Hi5-12G",
     referenceUrl: "https://www.aja.com/products/hi5-12g",
@@ -470,7 +470,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-005a-4000-8000-000000000090",
     deviceType: "converter",
-    label: "AJA HA5-12G",
+    label: "HA5-12G",
     manufacturer: "AJA",
     modelNumber: "HA5-12G",
     referenceUrl: "https://www.aja.com/products/ha5-12g",
@@ -496,7 +496,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-005b-4000-8000-000000000091",
     deviceType: "frame-sync",
-    label: "AJA FS-HDR",
+    label: "FS-HDR",
     manufacturer: "AJA",
     modelNumber: "FS-HDR",
     referenceUrl: "https://www.aja.com/products/fs-hdr",
@@ -1386,7 +1386,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-024c-4000-8000-000000000733",
     deviceType: "capture-card",
-    label: "Magewell USB Capture SDI Gen 2",
+    label: "USB Capture SDI Gen 2",
     manufacturer: "Magewell",
     modelNumber: "USB Capture SDI Gen 2",
     referenceUrl: "https://www.magewell.com/products/usb-capture-sdi-gen-2",

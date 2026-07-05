@@ -82,7 +82,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-002a-4000-8000-000000000042",
     deviceType: "ptz-camera",
-    label: "PTZOptics Move SE",
+    label: "Move SE",
     manufacturer: "PTZOptics",
     modelNumber: "Move SE",
     referenceUrl: "https://ptzoptics.com/move-se/",
@@ -112,7 +112,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0034-4000-8000-000000000052",
     deviceType: "media-player",
-    label: "BrightSign XD1035",
+    label: "XD1035",
     manufacturer: "BrightSign",
     modelNumber: "XD1035",
     referenceUrl: "https://docs.brightsign.biz/hardware/xd235-xd1035",
@@ -247,7 +247,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0080-4000-8000-000000000128",
     deviceType: "camera",
-    label: "Sony HDC-5500",
+    label: "HDC-5500",
     manufacturer: "Sony",
     modelNumber: "HDC-5500",
     referenceUrl: "https://pro.sony/en_US/products/system-cameras/hdc-5500",
@@ -271,7 +271,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0081-4000-8000-000000000129",
     deviceType: "camera",
-    label: "Sony HDC-3500",
+    label: "HDC-3500",
     manufacturer: "Sony",
     modelNumber: "HDC-3500",
     referenceUrl: "https://pro.sony/en_US/products/system-cameras/hdc-3500",
@@ -295,7 +295,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0082-4000-8000-000000000130",
     deviceType: "camera",
-    label: "Sony PXW-FX9",
+    label: "PXW-FX9",
     manufacturer: "Sony",
     modelNumber: "PXW-FX9",
     referenceUrl: "https://pro.sony/en_US/products/camcorders/pxw-fx9",
@@ -325,7 +325,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0083-4000-8000-000000000131",
     deviceType: "ptz-camera",
-    label: "Panasonic AW-UE160",
+    label: "AW-UE160",
     manufacturer: "Panasonic",
     modelNumber: "AW-UE160",
     referenceUrl: "https://na.panasonic.com/us/audio-video-solutions/broadcast-cinema/ptz-cameras/aw-ue160",
@@ -361,7 +361,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0084-4000-8000-000000000132",
     deviceType: "ptz-camera",
-    label: "Panasonic AW-UE150",
+    label: "AW-UE150",
     manufacturer: "Panasonic",
     modelNumber: "AW-UE150",
     referenceUrl: "https://na.panasonic.com/us/audio-video-solutions/broadcast-cinema/ptz-cameras/aw-ue150",
@@ -396,7 +396,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0085-4000-8000-000000000133",
     deviceType: "ptz-camera",
-    label: "Panasonic AW-UE100",
+    label: "AW-UE100",
     manufacturer: "Panasonic",
     modelNumber: "AW-UE100",
     referenceUrl: "https://na.panasonic.com/us/audio-video-solutions/broadcast-cinema/ptz-cameras/aw-ue100",
@@ -423,7 +423,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0086-4000-8000-000000000134",
     deviceType: "ptz-camera",
-    label: "Panasonic AW-UE80",
+    label: "AW-UE80",
     manufacturer: "Panasonic",
     modelNumber: "AW-UE80",
     referenceUrl: "https://na.panasonic.com/us/audio-video-solutions/broadcast-cinema/ptz-cameras/aw-ue80",
@@ -449,7 +449,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0087-4000-8000-000000000135",
     deviceType: "ptz-camera",
-    label: "Panasonic AW-UE50",
+    label: "AW-UE50",
     manufacturer: "Panasonic",
     modelNumber: "AW-UE50",
     referenceUrl: "https://na.panasonic.com/us/audio-video-solutions/broadcast-cinema/ptz-cameras/aw-ue50",
@@ -474,7 +474,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0088-4000-8000-000000000136",
     deviceType: "ptz-camera",
-    label: "Panasonic AW-HE145",
+    label: "AW-HE145",
     manufacturer: "Panasonic",
     modelNumber: "AW-HE145",
     referenceUrl: "https://na.panasonic.com/us/audio-video-solutions/broadcast-cinema/ptz-cameras/aw-he145",
@@ -498,7 +498,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0089-4000-8000-000000000137",
     deviceType: "ptz-camera",
-    label: "PTZOptics Move 4K",
+    label: "Move 4K",
     manufacturer: "PTZOptics",
     modelNumber: "Move 4K",
     referenceUrl: "https://ptzoptics.com/move-4k/",
@@ -524,7 +524,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-008a-4000-8000-000000000138",
     deviceType: "camera",
-    label: "Panasonic AK-UC4000",
+    label: "AK-UC4000",
     manufacturer: "Panasonic",
     modelNumber: "AK-UC4000",
     referenceUrl: "https://na.panasonic.com/us/audio-video-solutions/broadcast-cinema/studio-cameras/ak-uc4000",
@@ -571,7 +571,7 @@ export const templates: DeviceTemplate[] = [
     id: "c0a80101-0104-4000-8000-000000000336",
     deviceType: "camera",
     category: "cameras",
-    label: "Sony BRC-X400",
+    label: "BRC-X400",
     manufacturer: "Sony",
     modelNumber: "BRC-X400",
     referenceUrl: "https://pro.sony/en_US/products/ptz-network-cameras/brc-x400",
@@ -594,7 +594,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0249-4000-8000-000000000730",
     deviceType: "ptz-camera",
-    label: "BirdDog P200",
+    label: "P200",
     manufacturer: "BirdDog",
     modelNumber: "P200",
     referenceUrl: "https://birddog.tv/p200-overview/p200-techspecs/",
@@ -618,7 +618,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-024a-4000-8000-000000000731",
     deviceType: "ptz-camera",
-    label: "BirdDog P120",
+    label: "P120",
     manufacturer: "BirdDog",
     modelNumber: "P120",
     referenceUrl: "https://birddog.tv/p110p120-techspecs/",

@@ -6,7 +6,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00bc-4000-8000-000000000188",
     deviceType: "lighting-console",
-    label: "ETC ColorSource 20",
+    label: "ColorSource 20",
     manufacturer: "ETC",
     modelNumber: "ColorSource 20",
     referenceUrl: "https://www.etcconnect.com/Products/Consoles/ColorSource/Features.aspx",
@@ -47,7 +47,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00be-4000-8000-000000000190",
     deviceType: "lighting-console",
-    label: "ETC Eos Ti",
+    label: "Eos Ti",
     manufacturer: "ETC",
     modelNumber: "Eos Ti",
     referenceUrl: "https://www.etcconnect.com/Products/Consoles/Eos-Family/Eos-Ti/Features.aspx",
@@ -107,7 +107,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00c0-4000-8000-000000000192",
     deviceType: "moving-light",
-    label: "Martin MAC Aura XIP",
+    label: "MAC Aura XIP",
     manufacturer: "Martin",
     modelNumber: "MAC Aura XIP",
     referenceUrl: "https://www.martin.com/products/mac-aura-xip",
@@ -127,7 +127,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00c1-4000-8000-000000000193",
     deviceType: "moving-light",
-    label: "Ayrton Diablo",
+    label: "Diablo",
     manufacturer: "Ayrton",
     modelNumber: "Diablo",
     referenceUrl: "https://www.ayrton.eu/produit/diablo/",
@@ -146,7 +146,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00c2-4000-8000-000000000194",
     deviceType: "led-fixture",
-    label: "Chroma-Q Color Force 72",
+    label: "Color Force 72",
     manufacturer: "Chroma-Q",
     modelNumber: "Color Force 72",
     referenceUrl: "https://chroma-q.com/products/color-force-ii-72/",
@@ -165,7 +165,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00c3-4000-8000-000000000195",
     deviceType: "led-fixture",
-    label: "ETC ColorSource Spot",
+    label: "ColorSource Spot",
     manufacturer: "ETC",
     modelNumber: "ColorSource Spot",
     referenceUrl: "https://www.etcconnect.com/Products/Entertainment-Fixtures/ColorSource-Spot/",
@@ -204,7 +204,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00c5-4000-8000-000000000197",
     deviceType: "led-fixture",
-    label: "Litepanels Astra 1x1",
+    label: "Astra 1x1",
     manufacturer: "Litepanels",
     modelNumber: "Astra 1x1",
     referenceUrl: "https://www.litepanels.com/en/products",
@@ -250,7 +250,7 @@ export const templates: DeviceTemplate[] = [
     id: "c0a80101-0110-4000-8000-000000000348",
     deviceType: "lighting-console",
     category: "lighting",
-    label: "ETC Eos Apex",
+    label: "Eos Apex",
     manufacturer: "ETC",
     modelNumber: "Eos Apex",
     referenceUrl: "https://www.etcconnect.com/Products/Consoles/Eos-Consoles/",
@@ -332,7 +332,7 @@ export const templates: DeviceTemplate[] = [
     id: "c0a80101-0114-4000-8000-000000000352",
     deviceType: "moving-light",
     category: "lighting",
-    label: "Martin MAC Ultra Performance",
+    label: "MAC Ultra Performance",
     manufacturer: "Martin",
     modelNumber: "MAC Ultra Performance",
     referenceUrl: "https://www.martin.com/products/mac-ultra-performance",
@@ -423,7 +423,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01f8-4000-8000-000000000504",
     deviceType: "lighting-console",
-    label: "Avolites Arena",
+    label: "Arena",
     manufacturer: "Avolites",
     modelNumber: "Arena",
     referenceUrl: "https://www.avolites.com/product/arena/",
@@ -450,7 +450,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01f9-4000-8000-000000000505",
     deviceType: "lighting-console",
-    label: "ETC Element 2",
+    label: "Element 2",
     manufacturer: "ETC",
     modelNumber: "Element 2",
     referenceUrl:
@@ -472,7 +472,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01fa-4000-8000-000000000506",
     deviceType: "lighting-console",
-    label: "ETC Gio @5",
+    label: "Gio @5",
     manufacturer: "ETC",
     modelNumber: "Gio @5",
     referenceUrl:
@@ -501,7 +501,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01fb-4000-8000-000000000507",
     deviceType: "lighting-console",
-    label: "ETC Ion Xe",
+    label: "Ion Xe",
     manufacturer: "ETC",
     modelNumber: "Ion Xe",
     referenceUrl:
@@ -528,7 +528,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01fc-4000-8000-000000000508",
     deviceType: "lighting-console",
-    label: "ETC Ion Xe 20",
+    label: "Ion Xe 20",
     manufacturer: "ETC",
     modelNumber: "Ion Xe 20",
     referenceUrl:
@@ -576,7 +576,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01fe-4000-8000-000000000510",
     deviceType: "dmx-splitter",
-    label: "ETC Net3 4-Port Gateway",
+    label: "Net3 4-Port Gateway",
     manufacturer: "ETC",
     modelNumber: "Net3 4-Port Gateway",
     referenceUrl:
@@ -596,7 +596,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01ff-4000-8000-000000000511",
     deviceType: "lighting-console",
-    label: "ETC Universal Fader Wing",
+    label: "Universal Fader Wing",
     manufacturer: "ETC",
     modelNumber: "Universal Fader Wing",
     referenceUrl:
@@ -717,7 +717,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0204-4000-8000-000000000516",
     deviceType: "lighting-console",
-    label: "Follow-Me Mouse Console",
+    label: "Mouse Console",
     manufacturer: "Follow-Me",
     modelNumber: "Mouse Console",
     referenceUrl:
@@ -742,7 +742,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0205-4000-8000-000000000517",
     deviceType: "lighting-console",
-    label: "Follow-Me Fader Console",
+    label: "Fader Console",
     manufacturer: "Follow-Me",
     modelNumber: "Fader Console",
     referenceUrl:
@@ -769,7 +769,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0206-4000-8000-000000000518",
     deviceType: "moving-light",
-    label: "Elation Proteus Hybrid",
+    label: "Proteus Hybrid",
     manufacturer: "Elation",
     modelNumber: "Proteus Hybrid",
     referenceUrl: "https://www.elationlighting.com/products/proteus-hybrid",
@@ -799,7 +799,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0207-4000-8000-000000000519",
     deviceType: "moving-light",
-    label: "Elation Proteus Maximus",
+    label: "Proteus Maximus",
     manufacturer: "Elation",
     modelNumber: "Proteus Maximus",
     referenceUrl: "https://www.elationlighting.com/products/proteus-maximus",
@@ -827,7 +827,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0208-4000-8000-000000000520",
     deviceType: "moving-light",
-    label: "Elation Artiste Mondrian",
+    label: "Artiste Mondrian",
     manufacturer: "Elation",
     modelNumber: "Artiste Mondrian",
     referenceUrl: "https://www.elationlighting.com/artiste-mondrian",
@@ -853,7 +853,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0209-4000-8000-000000000521",
     deviceType: "moving-light",
-    label: "Ayrton Huracán LT",
+    label: "Huracán LT",
     manufacturer: "Ayrton",
     modelNumber: "Huracán LT",
     referenceUrl: "https://www.ayrton.eu/produit/huracan-lt/",
@@ -879,7 +879,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-020a-4000-8000-000000000522",
     deviceType: "moving-light",
-    label: "Ayrton Perseo Beam",
+    label: "Perseo Beam",
     manufacturer: "Ayrton",
     modelNumber: "Perseo Beam",
     referenceUrl: "https://www.ayrton.eu/produit/perseo-beam/",
@@ -990,7 +990,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-020e-4000-8000-000000000526",
     deviceType: "moving-light",
-    label: "Clay Paky Scenius Unico",
+    label: "Scenius Unico",
     manufacturer: "Clay Paky",
     modelNumber: "Scenius Unico",
     referenceUrl: "https://www.claypaky.it/products/scenius-unico/",
@@ -1017,7 +1017,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-020f-4000-8000-000000000527",
     deviceType: "led-fixture",
-    label: "GLP JDC1",
+    label: "JDC1",
     manufacturer: "GLP",
     modelNumber: "JDC1",
     referenceUrl:
@@ -1037,7 +1037,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0210-4000-8000-000000000528",
     deviceType: "moving-light",
-    label: "GLP impression X4 Bar 20",
+    label: "impression X4 Bar 20",
     manufacturer: "GLP",
     modelNumber: "impression X4 Bar 20",
     referenceUrl:
@@ -1151,7 +1151,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0214-4000-8000-000000000532",
     deviceType: "led-fixture",
-    label: "ARRI SkyPanel S60-C",
+    label: "SkyPanel S60-C",
     manufacturer: "ARRI",
     modelNumber: "SkyPanel S60-C",
     referenceUrl:
@@ -1180,7 +1180,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0215-4000-8000-000000000533",
     deviceType: "led-fixture",
-    label: "ARRI SkyPanel S360-C",
+    label: "SkyPanel S360-C",
     manufacturer: "ARRI",
     modelNumber: "SkyPanel S360-C",
     referenceUrl:
@@ -1209,7 +1209,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0216-4000-8000-000000000534",
     deviceType: "led-fixture",
-    label: "Astera Titan Tube",
+    label: "Titan Tube",
     manufacturer: "Astera",
     modelNumber: "Titan Tube (FP1)",
     referenceUrl: "https://astera-led.com/products/titan/specs/",
@@ -1234,7 +1234,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0217-4000-8000-000000000535",
     deviceType: "led-fixture",
-    label: "Astera AX5 TriplePAR",
+    label: "AX5 TriplePAR",
     manufacturer: "Astera",
     modelNumber: "AX5 TriplePAR",
     referenceUrl: "https://astera-led.com/products/ax5-triplepar/",
@@ -1263,7 +1263,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0218-4000-8000-000000000536",
     deviceType: "led-fixture",
-    label: "Chroma-Q Studio Force II 48",
+    label: "Studio Force II 48",
     manufacturer: "Chroma-Q",
     modelNumber: "Studio Force II 48",
     referenceUrl: "https://chroma-q.com/en_US/products/studio-force-ii-48",
@@ -1290,7 +1290,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0219-4000-8000-000000000537",
     deviceType: "led-fixture",
-    label: "ETC Source Four LED Series 2 Lustr",
+    label: "Source Four LED Series 2 Lustr",
     manufacturer: "ETC",
     modelNumber: "Source Four LED Series 2 Lustr",
     referenceUrl:

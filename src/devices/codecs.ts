@@ -5,7 +5,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00f1-4000-8000-000000000317",
     deviceType: "codec",
-    label: "Cisco Room Kit",
+    label: "Room Kit",
     manufacturer: "Cisco",
     modelNumber: "CS-KIT-K9",
     referenceUrl: "https://www.cisco.com/c/en/us/products/collateral/collaboration-endpoints/spark-room-kit-series/datasheet-c78-738729.html",
@@ -28,7 +28,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00f2-4000-8000-000000000318",
     deviceType: "codec",
-    label: "Cisco Codec Pro",
+    label: "Codec Pro",
     manufacturer: "Cisco",
     modelNumber: "CS-CODEC-PRO-K9",
     referenceUrl: "https://help.webex.com/article/n86suwx/Get-started-with-your-Cisco-Codec-Pro",

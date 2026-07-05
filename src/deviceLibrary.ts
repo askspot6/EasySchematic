@@ -22,12 +22,17 @@ import { templates as cloudServices } from "./devices/cloud-services";
 import { templates as codecs } from "./devices/codecs";
 import { templates as expansionCards } from "./devices/expansion-cards";
 import { templates as storageMedia } from "./devices/storage-media";
+
+// ─── Tri-State Sound & Light Brand Libraries ──────────────────────────────────
 import { templates as tristate } from "./devices/tristate";
 import { templates as symetrix } from "./devices/symetrix";
 import { templates as bss } from "./devices/bss";
 import { templates as eaw } from "./devices/eaw";
 import { templates as crown } from "./devices/crown";
 import { templates as jbl } from "./devices/jbl";
+import { templates as ev } from "./devices/ev";
+import { templates as atlona } from "./devices/atlona";
+import { templates as visionary } from "./devices/visionary";
 
 import { DEVICE_TYPE_TO_CATEGORY } from "./deviceTypeCategories";
 export { DEVICE_TYPE_TO_CATEGORY };
@@ -54,12 +59,16 @@ export const DEVICE_TEMPLATES: DeviceTemplate[] = [
   ...cableAccessories,
   ...cloudServices,
   ...codecs,
+  // ─── Tri-State Brand Libraries ──────────────────────────────────────────────
   ...tristate,
   ...symetrix,
   ...bss,
   ...eaw,
   ...crown,
   ...jbl,
+  ...ev,
+  ...atlona,
+  ...visionary,
 ];
 
 export const CARD_TEMPLATES: DeviceTemplate[] = [...expansionCards, ...storageMedia];

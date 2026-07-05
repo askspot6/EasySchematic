@@ -78,7 +78,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0035-4000-8000-000000000053",
     deviceType: "wireless-mic-receiver",
-    label: "Shure ULXD4Q",
+    label: "ULXD4Q",
     manufacturer: "Shure",
     modelNumber: "ULXD4Q",
     referenceUrl: "https://www.shure.com/en-US/products/wireless-systems/ulx-d_digital_wireless/ulxd4q",
@@ -106,7 +106,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0036-4000-8000-000000000054",
     deviceType: "wireless-mic-receiver",
-    label: "Sennheiser EW-DX EM 4",
+    label: "EW-DX EM 4",
     manufacturer: "Sennheiser",
     modelNumber: "EW-DX EM 4 Dante",
     referenceUrl: "https://www.sennheiser.com/en-us/catalog/products/wireless-systems/ew-dx-em-4-dante/ew-dx-em-4-dante-q1-9-509370",
@@ -132,7 +132,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0037-4000-8000-000000000055",
     deviceType: "audio-interface",
-    label: "Focusrite RedNet A16R",
+    label: "RedNet A16R",
     manufacturer: "Focusrite",
     modelNumber: "RedNet A16R MkII",
     referenceUrl: "https://us.focusrite.com/products/rednet-a16r-mkii",
@@ -160,7 +160,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-008b-4000-8000-000000000139",
     deviceType: "audio-mixer",
-    label: "Yamaha CL5",
+    label: "CL5",
     manufacturer: "Yamaha",
     modelNumber: "CL5",
     referenceUrl: "https://usa.yamaha.com/products/proaudio/mixers/cl_series/index.html",
@@ -197,7 +197,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-008c-4000-8000-000000000140",
     deviceType: "audio-mixer",
-    label: "Yamaha CL3",
+    label: "CL3",
     manufacturer: "Yamaha",
     modelNumber: "CL3",
     referenceUrl: "https://usa.yamaha.com/products/proaudio/mixers/cl_series/index.html",
@@ -234,7 +234,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-008d-4000-8000-000000000141",
     deviceType: "audio-mixer",
-    label: "Yamaha CL1",
+    label: "CL1",
     manufacturer: "Yamaha",
     modelNumber: "CL1",
     referenceUrl: "https://usa.yamaha.com/products/proaudio/mixers/cl_series/index.html",
@@ -271,7 +271,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-008e-4000-8000-000000000142",
     deviceType: "audio-mixer",
-    label: "Yamaha QL5",
+    label: "QL5",
     manufacturer: "Yamaha",
     modelNumber: "QL5",
     referenceUrl: "https://usa.yamaha.com/products/proaudio/mixers/ql_series/index.html",
@@ -305,7 +305,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-008f-4000-8000-000000000143",
     deviceType: "audio-mixer",
-    label: "Yamaha QL1",
+    label: "QL1",
     manufacturer: "Yamaha",
     modelNumber: "QL1",
     referenceUrl: "https://usa.yamaha.com/products/proaudio/mixers/ql_series/index.html",
@@ -339,7 +339,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0090-4000-8000-000000000144",
     deviceType: "audio-mixer",
-    label: "Yamaha TF5",
+    label: "TF5",
     manufacturer: "Yamaha",
     modelNumber: "TF5",
     referenceUrl: "https://usa.yamaha.com/products/proaudio/mixers/tf/index.html",
@@ -367,7 +367,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0091-4000-8000-000000000145",
     deviceType: "audio-mixer",
-    label: "Yamaha TF3",
+    label: "TF3",
     manufacturer: "Yamaha",
     modelNumber: "TF3",
     referenceUrl: "https://usa.yamaha.com/products/proaudio/mixers/tf/index.html",
@@ -395,7 +395,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0092-4000-8000-000000000146",
     deviceType: "audio-mixer",
-    label: "Yamaha TF1",
+    label: "TF1",
     manufacturer: "Yamaha",
     modelNumber: "TF1",
     referenceUrl: "https://usa.yamaha.com/products/proaudio/mixers/tf/index.html",
@@ -570,7 +570,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0096-4000-8000-000000000150",
     deviceType: "audio-mixer",
-    label: "DiGiCo SD7",
+    label: "SD7",
     manufacturer: "DiGiCo",
     modelNumber: "SD7",
     referenceUrl: "https://digico.biz/consoles/sd7/",
@@ -649,7 +649,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-011a-4000-8000-000000000358",
     deviceType: "audio-mixer",
-    label: "DiGiCo SD12",
+    label: "SD12",
     manufacturer: "DiGiCo",
     modelNumber: "SD12",
     referenceUrl: "https://digico.biz/consoles/sd12/",
@@ -681,7 +681,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0097-4000-8000-000000000151",
     deviceType: "stage-box",
-    label: "Yamaha Rio3224-D2",
+    label: "Rio3224-D2",
     manufacturer: "Yamaha",
     modelNumber: "Rio3224-D2",
     referenceUrl: "https://usa.yamaha.com/products/proaudio/interfaces/rio3224-d2/index.html",
@@ -708,7 +708,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0098-4000-8000-000000000152",
     deviceType: "stage-box",
-    label: "Yamaha Rio1608-D",
+    label: "Rio1608-D",
     manufacturer: "Yamaha",
     modelNumber: "Rio1608-D",
     referenceUrl: "https://usa.yamaha.com/products/proaudio/interfaces/rio1608-d2/index.html",
@@ -729,7 +729,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0099-4000-8000-000000000153",
     deviceType: "audio-dsp",
-    label: "QSC Q-SYS Core 110f",
+    label: "Q-SYS Core 110f",
     manufacturer: "QSC",
     modelNumber: "Core 110f",
     referenceUrl: "https://www.qsc.com/resource-files/productresources/dsp/q-sys_core/q_qsc_core_110f_spec.pdf",
@@ -755,7 +755,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-009a-4000-8000-000000000154",
     deviceType: "audio-dsp",
-    label: "Biamp Tesira SERVER",
+    label: "Tesira SERVER",
     manufacturer: "Biamp",
     modelNumber: "Tesira SERVER",
     referenceUrl: "https://www.biamp.com/products/tesira-platform",
@@ -779,7 +779,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-009b-4000-8000-000000000155",
     deviceType: "audio-interface",
-    label: "Focusrite RedNet PCIeNX",
+    label: "RedNet PCIeNX",
     manufacturer: "Focusrite",
     modelNumber: "RedNet PCIeNX",
     referenceUrl: "https://us.focusrite.com/products/rednet-pcienx",
@@ -793,7 +793,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-009c-4000-8000-000000000156",
     deviceType: "audio-interface",
-    label: "Audinate AVIO Input",
+    label: "AVIO Input",
     manufacturer: "Audinate",
     modelNumber: "AVIO Analog Input 2ch",
     referenceUrl: "https://www.audinate.com/products/devices/dante-avio",
@@ -812,7 +812,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-009d-4000-8000-000000000157",
     deviceType: "audio-interface",
-    label: "Audinate AVIO Output",
+    label: "AVIO Output",
     manufacturer: "Audinate",
     modelNumber: "AVIO Analog Output 2ch",
     referenceUrl: "https://www.audinate.com/products/devices/dante-avio",
@@ -831,7 +831,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-009e-4000-8000-000000000158",
     deviceType: "audio-interface",
-    label: "Audinate AVIO USB",
+    label: "AVIO USB",
     manufacturer: "Audinate",
     modelNumber: "AVIO USB",
     referenceUrl: "https://www.audinate.com/products/devices/dante-avio",
@@ -850,7 +850,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-009f-4000-8000-000000000159",
     deviceType: "wireless-mic-receiver",
-    label: "Shure AD4Q",
+    label: "AD4Q",
     manufacturer: "Shure",
     modelNumber: "AD4Q",
     referenceUrl: "https://www.shure.com/en-US/products/wireless-systems/axient_digital/ad4q",
@@ -872,7 +872,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00a0-4000-8000-000000000160",
     deviceType: "wireless-mic-receiver",
-    label: "Shure QLXD4",
+    label: "QLXD4",
     manufacturer: "Shure",
     modelNumber: "QLXD4",
     referenceUrl: "https://www.shure.com/en-US/products/wireless-systems/qlx-d/qlxd4",
@@ -891,7 +891,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00a1-4000-8000-000000000161",
     deviceType: "wireless-mic-receiver",
-    label: "Shure SLXD4",
+    label: "SLXD4",
     manufacturer: "Shure",
     modelNumber: "SLXD4",
     referenceUrl: "https://www.shure.com/en-US/products/wireless-systems/slx-d/slxd4",
@@ -910,7 +910,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00a2-4000-8000-000000000162",
     deviceType: "wireless-mic-receiver",
-    label: "Sennheiser EM 6000",
+    label: "EM 6000",
     manufacturer: "Sennheiser",
     modelNumber: "EM 6000",
     referenceUrl: "https://www.sennheiser.com/en-us/catalog/products/wireless-systems/digital-6000/digital-6000-em-6000-509360",
@@ -963,7 +963,7 @@ export const templates: DeviceTemplate[] = [
     id: "c0a80101-0107-4000-8000-000000000339",
     deviceType: "audio-mixer",
     category: "audio-mixers",
-    label: "Yamaha DM7",
+    label: "DM7",
     manufacturer: "Yamaha",
     modelNumber: "DM7",
     referenceUrl: "https://usa.yamaha.com/products/proaudio/mixers/dm7/index.html",
@@ -988,7 +988,7 @@ export const templates: DeviceTemplate[] = [
     id: "c0a80101-0108-4000-8000-000000000340",
     deviceType: "audio-interface",
     category: "audio-interfaces",
-    label: "Shure ANI4IN",
+    label: "ANI4IN",
     manufacturer: "Shure",
     modelNumber: "ANI4IN-XLR",
     referenceUrl: "https://www.shure.com/en-US/products/mixers/ani/ani4in-xlr",
@@ -1011,7 +1011,7 @@ export const templates: DeviceTemplate[] = [
     id: "c0a80101-0109-4000-8000-000000000341",
     deviceType: "audio-interface",
     category: "audio-interfaces",
-    label: "Shure ANI4OUT",
+    label: "ANI4OUT",
     manufacturer: "Shure",
     modelNumber: "ANI4OUT-XLR",
     referenceUrl: "https://www.shure.com/en-US/products/mixers/ani/ani4out-xlr",
@@ -1034,7 +1034,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01aa-4000-8000-000000000426",
     deviceType: "audio-mixer",
-    label: "Yamaha CS-R3",
+    label: "CS-R3",
     manufacturer: "Yamaha",
     modelNumber: "CS-R3",
     referenceUrl:
@@ -1078,7 +1078,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01ab-4000-8000-000000000427",
     deviceType: "audio-mixer",
-    label: "Yamaha CS-R5",
+    label: "CS-R5",
     manufacturer: "Yamaha",
     modelNumber: "CS-R5",
     referenceUrl:
@@ -1126,7 +1126,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01ac-4000-8000-000000000428",
     deviceType: "audio-mixer",
-    label: "Yamaha DM3-D",
+    label: "DM3-D",
     manufacturer: "Yamaha",
     modelNumber: "DM3-D",
     referenceUrl:
@@ -1161,7 +1161,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01ad-4000-8000-000000000429",
     deviceType: "audio-mixer",
-    label: "Behringer X32 Compact",
+    label: "X32 Compact",
     manufacturer: "Behringer",
     modelNumber: "X32 Compact",
     referenceUrl:
@@ -1200,7 +1200,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01ae-4000-8000-000000000430",
     deviceType: "audio-mixer",
-    label: "Mackie ProFX16v2",
+    label: "ProFX16v2",
     manufacturer: "Mackie",
     modelNumber: "ProFX16v2",
     referenceUrl:
@@ -1236,7 +1236,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01af-4000-8000-000000000431",
     deviceType: "wireless-mic-receiver",
-    label: "Shure AD4Q",
+    label: "AD4Q",
     manufacturer: "Shure",
     modelNumber: "AD4Q",
     referenceUrl:
@@ -1274,7 +1274,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01b0-4000-8000-000000000432",
     deviceType: "iem-transmitter",
-    label: "Shure PSM 1000 P10T",
+    label: "PSM 1000 P10T",
     manufacturer: "Shure",
     modelNumber: "P10T",
     referenceUrl:
@@ -1309,7 +1309,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01b1-4000-8000-000000000433",
     deviceType: "wired-mic",
-    label: "Shure KSM32",
+    label: "KSM32",
     manufacturer: "Shure",
     modelNumber: "KSM32",
     referenceUrl:
@@ -1333,7 +1333,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01b2-4000-8000-000000000434",
     deviceType: "wired-mic",
-    label: "Shure Beta 87A",
+    label: "Beta 87A",
     manufacturer: "Shure",
     modelNumber: "Beta 87A",
     referenceUrl:
@@ -1358,7 +1358,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01b3-4000-8000-000000000435",
     deviceType: "wired-mic",
-    label: "Shure MX412",
+    label: "MX412",
     manufacturer: "Shure",
     modelNumber: "MX412",
     referenceUrl:
@@ -1382,7 +1382,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01b4-4000-8000-000000000436",
     deviceType: "wired-mic",
-    label: "Shure MX418",
+    label: "MX418",
     manufacturer: "Shure",
     modelNumber: "MX418",
     referenceUrl:
