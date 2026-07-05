@@ -533,6 +533,7 @@ export interface DeviceTemplate {
   rackForm?: "full" | "half" | "shelf-only"; // Optional override for the size-based rack-form heuristic
   auxiliaryData?: AuxRow[];      // Aux rows shown on the node (each row carries its own header/footer slot)
   facePlateLayout?: FacePlateLayout; // Custom face-plate connector positions
+  _community?: boolean;             // Tagged true for community library templates (not Tri-State curated)
 }
 
 export interface CustomTemplateGroup {

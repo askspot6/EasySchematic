@@ -1,11 +1,13 @@
 import type { DeviceTemplate } from "./types";
 import fallbackData from "./deviceLibrary.fallback.json";
+import { loadCachedTemplates, saveCachedTemplates } from "./templateCache";
 
-// ─── Tri-State build: remote community library fetch disabled. ────────────────
-// We serve our own curated device library from deviceLibrary.fallback.json.
-// The remote API at api.easyschematic.live is intentionally not contacted.
+const API_URL =
+  import.meta.env?.VITE_TEMPLATE_API_URL ?? "https://api.easyschematic.live";
 
+let cached: DeviceTemplate[] | null = null;
 let degraded = false;
+
 export function isLibraryDegraded(): boolean {
   return degraded;
 }
@@ -14,43 +16,87 @@ export function getBundledTemplates(): DeviceTemplate[] {
   return fallbackData as DeviceTemplate[];
 }
 
-export function getTemplateById(id: string, extra: DeviceTemplate[] = []): DeviceTemplate | undefined {
+/** Returns bundled (local) templates first, then community templates that
+ *  don't conflict with bundled IDs. Community templates are tagged with
+ *  _community: true so the UI can style them differently. */
+function effectiveTemplates(): DeviceTemplate[] {
   const bundled = fallbackData as DeviceTemplate[];
-  return bundled.find((t) => t.id === id) ?? extra.find((t) => t.id === id);
+  if (!cached) return bundled;
+  const bundledIds = new Set(bundled.map((t) => t.id).filter((id): id is string => !!id));
+  // Only include community templates that don't shadow our curated ones
+  const communityOnly = cached
+    .filter((t) => t.id && !bundledIds.has(t.id))
+    .map((t) => ({ ...t, _community: true } as DeviceTemplate));
+  return [...bundled, ...communityOnly];
+}
+
+export function getTemplateById(id: string, extra: DeviceTemplate[] = []): DeviceTemplate | undefined {
+  return effectiveTemplates().find((t) => t.id === id) ?? extra.find((t) => t.id === id);
 }
 
 export function getCardsByFamily(family: string, extra: DeviceTemplate[] = []): DeviceTemplate[] {
-  const bundled = fallbackData as DeviceTemplate[];
   return [
-    ...bundled.filter((t) => t.slotFamily === family),
+    ...effectiveTemplates().filter((t) => t.slotFamily === family),
     ...extra.filter((t) => t.slotFamily === family),
   ];
 }
 
-// Always returns bundled templates — no remote fetch.
-export async function fetchTemplates(): Promise<DeviceTemplate[]> {
-  return fallbackData as DeviceTemplate[];
-}
-
 // ==================== AUTH & DRAFTS ====================
-// Stub implementations — community features not used in Tri-State build.
-
 
 export async function checkSession(): Promise<{ id: string; email: string; name: string | null } | null> {
-  return null;
+  try {
+    const res = await fetch(`${API_URL}/auth/me`, { credentials: "include" });
+    if (!res.ok) return null;
+    return res.json();
+  } catch {
+    return null;
+  }
 }
 
-export async function requestLogin(_email: string, _returnTo?: string): Promise<void> {}
+export async function requestLogin(email: string, returnTo?: string): Promise<void> {
+  const res = await fetch(`${API_URL}/auth/login`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    credentials: "include",
+    body: JSON.stringify({ email, ...(returnTo ? { returnTo } : {}) }),
+  });
+  if (!res.ok) {
+    const data = (await res.json()) as { error: string };
+    throw new Error(data.error || "Failed to send login link");
+  }
+}
 
-export async function createDraft(_data: unknown): Promise<string> {
-  throw new Error("Community features not enabled");
+export async function createDraft(data: unknown): Promise<string> {
+  const res = await fetch(`${API_URL}/drafts`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    credentials: "include",
+    body: JSON.stringify({ data }),
+  });
+  if (!res.ok) {
+    const err = (await res.json()) as { error: string };
+    throw new Error(err.error || "Failed to create draft");
+  }
+  const result = (await res.json()) as { id: string };
+  return result.id;
 }
 
 export async function createHandoff(): Promise<string> {
-  throw new Error("Community features not enabled");
+  const res = await fetch(`${API_URL}/auth/handoff`, {
+    method: "POST",
+    credentials: "include",
+  });
+  if (!res.ok) {
+    const err = (await res.json()) as { error: string };
+    throw new Error(err.error || "Failed to create handoff token");
+  }
+  const result = (await res.json()) as { token: string };
+  return result.token;
 }
 
-export async function logout(): Promise<void> {}
+export async function logout(): Promise<void> {
+  await fetch(`${API_URL}/auth/logout`, { method: "POST", credentials: "include" });
+}
 
 // ==================== CLOUD SCHEMATICS ====================
 
@@ -65,52 +111,217 @@ export interface CloudSchematic {
   updated_at: string;
 }
 
-export async function saveSchematicToCloud(_data: unknown): Promise<CloudSchematic> {
-  throw new Error("Cloud features not enabled");
+export async function saveSchematicToCloud(data: unknown): Promise<CloudSchematic> {
+  const res = await fetch(`${API_URL}/schematics`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    credentials: "include",
+    body: JSON.stringify(data),
+  });
+  if (!res.ok) {
+    const err = (await res.json()) as { error: string };
+    throw new Error(err.error || "Failed to save schematic");
+  }
+  return res.json();
 }
 
-export async function updateSchematicInCloud(_id: string, _data: unknown): Promise<CloudSchematic> {
-  throw new Error("Cloud features not enabled");
+export async function updateSchematicInCloud(id: string, data: unknown): Promise<CloudSchematic> {
+  const res = await fetch(`${API_URL}/schematics/${id}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    credentials: "include",
+    body: JSON.stringify(data),
+  });
+  if (!res.ok) {
+    const err = (await res.json()) as { error: string };
+    throw new Error(err.error || "Failed to update schematic");
+  }
+  return res.json();
 }
 
 export async function listCloudSchematics(): Promise<CloudSchematic[]> {
-  return [];
+  const res = await fetch(`${API_URL}/schematics`, { credentials: "include" });
+  if (!res.ok) {
+    const err = (await res.json()) as { error: string };
+    throw new Error(err.error || "Failed to list schematics");
+  }
+  return res.json();
 }
 
-export async function loadCloudSchematic(_id: string): Promise<unknown> {
-  throw new Error("Cloud features not enabled");
+export async function loadCloudSchematic(id: string): Promise<unknown> {
+  const res = await fetch(`${API_URL}/schematics/${id}`, { credentials: "include" });
+  if (!res.ok) {
+    const err = (await res.json()) as { error: string };
+    throw new Error(err.error || "Failed to load schematic");
+  }
+  return res.json();
 }
 
-export async function deleteCloudSchematic(_id: string): Promise<void> {}
-
-export async function toggleSchematicSharing(_id: string, _shared: boolean): Promise<CloudSchematic> {
-  throw new Error("Cloud features not enabled");
+export async function deleteCloudSchematic(id: string): Promise<void> {
+  const res = await fetch(`${API_URL}/schematics/${id}`, {
+    method: "DELETE",
+    credentials: "include",
+  });
+  if (!res.ok) {
+    const err = (await res.json()) as { error: string };
+    throw new Error(err.error || "Failed to delete schematic");
+  }
 }
 
-export async function loadSharedSchematic(_token: string): Promise<unknown> {
-  throw new Error("Cloud features not enabled");
+export async function toggleSchematicSharing(id: string, shared: boolean): Promise<CloudSchematic> {
+  const res = await fetch(`${API_URL}/schematics/${id}/share`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    credentials: "include",
+    body: JSON.stringify({ shared }),
+  });
+  if (!res.ok) {
+    const err = (await res.json()) as { error: string };
+    throw new Error(err.error || "Failed to toggle sharing");
+  }
+  return res.json();
 }
 
-export async function renameCloudSchematic(_id: string, _name: string): Promise<CloudSchematic> {
-  throw new Error("Cloud features not enabled");
+export async function loadSharedSchematic(token: string): Promise<unknown> {
+  const res = await fetch(`${API_URL}/shared/${token}`, { credentials: "include" });
+  if (!res.ok) {
+    const err = (await res.json()) as { error: string };
+    throw new Error(err.error || "Shared schematic not found");
+  }
+  return res.json();
 }
 
-export async function setSchematicAsTemplate(_id: string): Promise<void> {}
+export async function renameCloudSchematic(id: string, name: string): Promise<CloudSchematic> {
+  const res = await fetch(`${API_URL}/schematics/${id}/rename`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    credentials: "include",
+    body: JSON.stringify({ name }),
+  });
+  if (!res.ok) {
+    const err = (await res.json()) as { error: string };
+    throw new Error(err.error || "Failed to rename schematic");
+  }
+  return res.json();
+}
 
-export async function clearSchematicTemplate(): Promise<void> {}
+export async function setSchematicAsTemplate(id: string): Promise<void> {
+  const res = await fetch(`${API_URL}/schematics/${id}/set-template`, {
+    method: "PUT",
+    credentials: "include",
+  });
+  if (!res.ok) {
+    const err = (await res.json()) as { error: string };
+    throw new Error(err.error || "Failed to set template");
+  }
+}
+
+export async function clearSchematicTemplate(): Promise<void> {
+  const res = await fetch(`${API_URL}/schematics/template`, {
+    method: "DELETE",
+    credentials: "include",
+  });
+  if (!res.ok) {
+    const err = (await res.json()) as { error: string };
+    throw new Error(err.error || "Failed to clear template");
+  }
+}
 
 export async function loadSchematicTemplate(): Promise<unknown | null> {
-  return null;
+  const res = await fetch(`${API_URL}/schematics/template`, { credentials: "include" });
+  if (res.status === 404) return null;
+  if (!res.ok) {
+    const err = (await res.json()) as { error: string };
+    throw new Error(err.error || "Failed to load template");
+  }
+  return res.json();
 }
 
 // ==================== TEMPLATES ====================
 
 export async function createSubmission(
-  _action: "create" | "update",
-  _data: unknown,
-  _templateId?: string,
-  _submitterNote?: string,
-  _source?: string,
+  action: "create" | "update",
+  data: Omit<DeviceTemplate, "id" | "version">,
+  templateId?: string,
+  submitterNote?: string,
+  source?: "manual" | "bulk-json" | "bulk-csv",
 ): Promise<{ id: string }> {
-  throw new Error("Community features not enabled");
+  const res = await fetch(`${API_URL}/submissions`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    credentials: "include",
+    body: JSON.stringify({
+      action,
+      data,
+      templateId,
+      ...(submitterNote && { submitterNote }),
+      ...(source && { source }),
+    }),
+  });
+  if (res.status === 401) throw new Error("Sign in to submit to the community library");
+  if (res.status === 403) throw new Error("Account suspended");
+  if (res.status === 429) {
+    const err = (await res.json().catch(() => ({}))) as { error?: string };
+    throw new Error(err.error || "Too many submissions — try again later");
+  }
+  if (res.status === 409) {
+    const err = (await res.json().catch(() => ({}))) as { error?: string };
+    throw new Error(err.error || "Duplicate submission");
+  }
+  if (!res.ok) {
+    const err = (await res.json()) as { error?: string };
+    throw new Error(err.error || `Submission failed: ${res.status}`);
+  }
+  return res.json();
+}
+
+const TEMPLATE_FETCH_TIMEOUT_MS = 12_000;
+const TEMPLATE_FETCH_RETRIES = 2;
+
+async function fetchTemplatesOnce(): Promise<DeviceTemplate[]> {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), TEMPLATE_FETCH_TIMEOUT_MS);
+  try {
+    const res = await fetch(`${API_URL}/templates`, { signal: ctrl.signal });
+    if (!res.ok) throw new Error(`API ${res.status}`);
+    return (await res.json()) as DeviceTemplate[];
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+/**
+ * Fetch the community library resiliently. Bundled (Tri-State curated) templates
+ * always take priority — community templates that share an ID with a bundled
+ * template are dropped. Community-only templates are tagged _community: true
+ * so the UI can render them in a distinct color.
+ */
+export async function fetchTemplates(): Promise<DeviceTemplate[]> {
+  if (cached && !degraded) return effectiveTemplates();
+
+  let lastErr: unknown;
+  for (let attempt = 0; attempt <= TEMPLATE_FETCH_RETRIES; attempt++) {
+    try {
+      const data = await fetchTemplatesOnce();
+      cached = data;
+      degraded = false;
+      void saveCachedTemplates(data);
+      return effectiveTemplates();
+    } catch (err) {
+      lastErr = err;
+      if (attempt < TEMPLATE_FETCH_RETRIES) {
+        await new Promise((r) => setTimeout(r, 400 * (attempt + 1)));
+      }
+    }
+  }
+
+  const cachedLib = await loadCachedTemplates();
+  if (cachedLib?.length) {
+    cached = cachedLib;
+    degraded = true;
+    return effectiveTemplates();
+  }
+
+  degraded = true;
+  throw lastErr instanceof Error ? lastErr : new Error("Failed to load device library");
 }

@@ -108,8 +108,11 @@ function TemplateItem({
         </div>
       )}
       <div className="flex flex-col gap-0.5 flex-1 min-w-0">
-        <span className="text-xs text-[var(--color-text-heading)] font-medium truncate flex items-center gap-1">
+        <span className={`text-xs font-medium truncate flex items-center gap-1 ${template._community ? "text-amber-500" : "text-[var(--color-text-heading)]"}`}>
           <HighlightedText text={template.label} query={query} />
+          {template._community && (
+            <span className="text-[8px] text-amber-500 border border-amber-500/40 rounded px-1 py-px font-normal shrink-0">community</span>
+          )}
           {hasPreset && (
             <span className="text-[8px] text-blue-500 bg-blue-50 rounded px-1 py-px font-normal shrink-0">preset</span>
           )}
