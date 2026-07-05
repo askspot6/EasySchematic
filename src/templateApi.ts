@@ -26,7 +26,18 @@ function effectiveTemplates(): DeviceTemplate[] {
   // Only include community templates that don't shadow our curated ones
   const communityOnly = cached
     .filter((t) => t.id && !bundledIds.has(t.id))
-    .map((t) => ({ ...t, _community: true } as DeviceTemplate));
+    .map((t) => {
+      // Strip manufacturer prefix from label — match our formatting convention
+      let label = t.label ?? "";
+      const mfgr = t.manufacturer ?? "";
+      const firstWord = mfgr.split(" ")[0];
+      if (mfgr.length > 2 && label.toLowerCase().startsWith(mfgr.toLowerCase() + " ")) {
+        label = label.slice(mfgr.length).trim();
+      } else if (firstWord.length > 2 && label.toLowerCase().startsWith(firstWord.toLowerCase() + " ")) {
+        label = label.slice(firstWord.length).trim();
+      }
+      return { ...t, label, _community: true } as DeviceTemplate;
+    });
   return [...bundled, ...communityOnly];
 }
 
