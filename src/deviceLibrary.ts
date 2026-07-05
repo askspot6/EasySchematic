@@ -34,6 +34,8 @@ import { templates as ev } from "./devices/ev";
 import { templates as atlona } from "./devices/atlona";
 import { templates as visionary } from "./devices/visionary";
 import { templates as qsys } from "./devices/qsys";
+import { templates as shure } from "./devices/shure";
+import { templates as audioTechnica } from "./devices/audio_technica";
 
 import { DEVICE_TYPE_TO_CATEGORY } from "./deviceTypeCategories";
 export { DEVICE_TYPE_TO_CATEGORY };
@@ -71,6 +73,8 @@ export const DEVICE_TEMPLATES: DeviceTemplate[] = [
   ...atlona,
   ...visionary,
   ...qsys,
+  ...shure,
+  ...audioTechnica,
 ];
 
 export const CARD_TEMPLATES: DeviceTemplate[] = [...expansionCards, ...storageMedia];
