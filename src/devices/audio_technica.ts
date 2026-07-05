@@ -201,36 +201,6 @@ export const templates: DeviceTemplate[] = [
     ],
   },
 
-  // ─── 3000 SERIES — TRANSMITTERS ──────────────────────────────────────────────
-
-  {
-    id: "at-atw-t3201",
-    deviceType: "microphone",
-    label: "ATW-T3201 Bodypack",
-    shortName: "ATW-T3201",
-    manufacturer: "Audio-Technica",
-    modelNumber: "ATW-T3201",
-    searchTerms: ["audio-technica", "atw-t3201", "3000 series", "wireless", "transmitter", "bodypack", "lavalier", "headset", "uhf"],
-    weightKg: 0.1,
-    referenceUrl: "https://www.audio-technica.com/en-us/atw-t3201",
-    ports: [
-      port("cH-style Mic Input (4-pin)", "analog-audio", "input", "mini-xlr"),
-    ],
-  },
-
-  {
-    id: "at-atw-t3202",
-    deviceType: "microphone",
-    label: "ATW-T3202 Handheld",
-    shortName: "ATW-T3202",
-    manufacturer: "Audio-Technica",
-    modelNumber: "ATW-T3202",
-    searchTerms: ["audio-technica", "atw-t3202", "3000 series", "wireless", "transmitter", "handheld", "vocal", "uhf", "interchangeable capsule"],
-    weightKg: 0.3,
-    referenceUrl: "https://www.audio-technica.com/en-us/atw-t3202",
-    ports: [],
-  },
-
   // ─── 5000 SERIES — RECEIVERS ─────────────────────────────────────────────────
 
   {
@@ -279,36 +249,6 @@ export const templates: DeviceTemplate[] = [
       port("RF Cascade Out", "rf", "output", "bnc"),
       port("AC Power", "power", "input"),
     ],
-  },
-
-  // ─── 5000 SERIES — TRANSMITTERS ──────────────────────────────────────────────
-
-  {
-    id: "at-atw-t5201",
-    deviceType: "microphone",
-    label: "ATW-T5201 Bodypack",
-    shortName: "ATW-T5201",
-    manufacturer: "Audio-Technica",
-    modelNumber: "ATW-T5201",
-    searchTerms: ["audio-technica", "atw-t5201", "5000 series", "wireless", "transmitter", "bodypack", "lavalier", "headset", "uhf", "professional"],
-    weightKg: 0.1,
-    referenceUrl: "https://www.audio-technica.com/en-us/atw-t5201",
-    ports: [
-      port("cH-style Mic Input (4-pin)", "analog-audio", "input", "mini-xlr"),
-    ],
-  },
-
-  {
-    id: "at-atw-t5202",
-    deviceType: "microphone",
-    label: "ATW-T5202 Handheld",
-    shortName: "ATW-T5202",
-    manufacturer: "Audio-Technica",
-    modelNumber: "ATW-T5202",
-    searchTerms: ["audio-technica", "atw-t5202", "5000 series", "wireless", "transmitter", "handheld", "vocal", "uhf", "professional", "interchangeable capsule"],
-    weightKg: 0.36,
-    referenceUrl: "https://www.audio-technica.com/en-us/atw-t5202",
-    ports: [],
   },
 
   // ─── D50 DIGITAL UHF WIRELESS — RECEIVERS ────────────────────────────────────
@@ -364,46 +304,6 @@ export const templates: DeviceTemplate[] = [
     ],
   },
 
-  // ─── D50 — TRANSMITTERS ───────────────────────────────────────────────────────
-
-  {
-    id: "at-atw-dt3201",
-    deviceType: "microphone",
-    label: "ATW-DT3201 Bodypack",
-    shortName: "ATW-DT3201",
-    manufacturer: "Audio-Technica",
-    modelNumber: "ATW-DT3201",
-    searchTerms: ["audio-technica", "atw-dt3201", "d50", "wireless", "transmitter", "bodypack", "lavalier", "headset", "digital", "uhf", "lithium ion"],
-    referenceUrl: "https://www.audio-technica.com/en-us/atw-dt3201",
-    ports: [
-      port("cH-style Mic Input (4-pin)", "analog-audio", "input", "mini-xlr"),
-    ],
-  },
-
-  {
-    id: "at-atw-dt3202",
-    deviceType: "microphone",
-    label: "ATW-DT3202 Handheld",
-    shortName: "ATW-DT3202",
-    manufacturer: "Audio-Technica",
-    modelNumber: "ATW-DT3202",
-    searchTerms: ["audio-technica", "atw-dt3202", "d50", "wireless", "transmitter", "handheld", "vocal", "digital", "uhf", "lithium ion", "interchangeable capsule"],
-    referenceUrl: "https://www.audio-technica.com/en-us/atw-dt3202",
-    ports: [],
-  },
-
-  {
-    id: "at-atw-dt3203",
-    deviceType: "microphone",
-    label: "ATW-DT3203 Desk Stand",
-    shortName: "ATW-DT3203",
-    manufacturer: "Audio-Technica",
-    modelNumber: "ATW-DT3203",
-    searchTerms: ["audio-technica", "atw-dt3203", "d50", "wireless", "transmitter", "desk stand", "gooseneck", "digital", "uhf", "conferencing", "boardroom"],
-    referenceUrl: "https://www.audio-technica.com/en-us/atw-dt3203",
-    ports: [],
-  },
-
   // ─── ENGINEERED SOUND WIRELESS — RECEIVERS ───────────────────────────────────
   // ⚠ ADDENDUM: ESW-R4180 exact dimensions not published. Low-profile desktop/ceiling unit.
 
@@ -437,58 +337,6 @@ export const templates: DeviceTemplate[] = [
       port("AT LINK / Ethernet (PoE)", "ethernet", "bidirectional"),
       port("Ethernet 2 (Control)", "ethernet", "bidirectional"),
     ],
-  },
-
-  // ─── ENGINEERED SOUND — TRANSMITTERS ─────────────────────────────────────────
-
-  {
-    id: "at-esw-t4101",
-    deviceType: "microphone",
-    label: "ESW-T4101 Bodypack",
-    shortName: "ESW-T4101",
-    manufacturer: "Audio-Technica",
-    modelNumber: "ESW-T4101",
-    searchTerms: ["audio-technica", "esw-t4101", "engineered sound", "esw", "dect", "wireless", "transmitter", "bodypack", "lavalier", "conferencing"],
-    referenceUrl: "https://www.audio-technica.com/en-us/esw-t4101",
-    ports: [
-      port("cH-style Mic Input (4-pin)", "analog-audio", "input", "mini-xlr"),
-    ],
-  },
-
-  {
-    id: "at-esw-t4102",
-    deviceType: "microphone",
-    label: "ESW-T4102 Handheld",
-    shortName: "ESW-T4102",
-    manufacturer: "Audio-Technica",
-    modelNumber: "ESW-T4102",
-    searchTerms: ["audio-technica", "esw-t4102", "engineered sound", "esw", "dect", "wireless", "transmitter", "handheld", "conferencing"],
-    referenceUrl: "https://www.audio-technica.com/en-us/esw-t4102",
-    ports: [],
-  },
-
-  {
-    id: "at-esw-t4104",
-    deviceType: "microphone",
-    label: "ESW-T4104 Desk Stand",
-    shortName: "ESW-T4104",
-    manufacturer: "Audio-Technica",
-    modelNumber: "ESW-T4104",
-    searchTerms: ["audio-technica", "esw-t4104", "engineered sound", "esw", "dect", "wireless", "transmitter", "desk stand", "conferencing", "boardroom"],
-    referenceUrl: "https://www.audio-technica.com/en-us/esw-t4104",
-    ports: [],
-  },
-
-  {
-    id: "at-esw-t4106",
-    deviceType: "microphone",
-    label: "ESW-T4106 Boundary",
-    shortName: "ESW-T4106",
-    manufacturer: "Audio-Technica",
-    modelNumber: "ESW-T4106",
-    searchTerms: ["audio-technica", "esw-t4106", "engineered sound", "esw", "dect", "wireless", "transmitter", "boundary", "conferencing", "surface mount"],
-    referenceUrl: "https://www.audio-technica.com/en-us/esw-t4106",
-    ports: [],
   },
 
   // ─── SYSTEM 20 PRO — 2.4 GHz ─────────────────────────────────────────────────
@@ -533,60 +381,6 @@ export const templates: DeviceTemplate[] = [
       port("RJ12 Link", "ethernet", "bidirectional"),
       port("DC Power", "power", "input"),
     ],
-  },
-
-  // ─── SYSTEM 20 PRO / SYSTEM 10 PRO — TRANSMITTERS ────────────────────────────
-
-  {
-    id: "at-atw-t1401",
-    deviceType: "microphone",
-    label: "ATW-T1401 Bodypack",
-    shortName: "ATW-T1401",
-    manufacturer: "Audio-Technica",
-    modelNumber: "ATW-T1401",
-    searchTerms: ["audio-technica", "atw-t1401", "system 20 pro", "2.4ghz", "wireless", "transmitter", "bodypack", "lavalier", "headset"],
-    referenceUrl: "https://www.audio-technica.com/en-us/atw-t1401",
-    ports: [
-      port("cH-style Mic Input (4-pin)", "analog-audio", "input", "mini-xlr"),
-    ],
-  },
-
-  {
-    id: "at-atw-t1402",
-    deviceType: "microphone",
-    label: "ATW-T1402 Handheld",
-    shortName: "ATW-T1402",
-    manufacturer: "Audio-Technica",
-    modelNumber: "ATW-T1402",
-    searchTerms: ["audio-technica", "atw-t1402", "system 20 pro", "2.4ghz", "wireless", "transmitter", "handheld", "vocal"],
-    referenceUrl: "https://www.audio-technica.com/en-us/atw-t1402",
-    ports: [],
-  },
-
-  {
-    id: "at-atw-t1001",
-    deviceType: "microphone",
-    label: "ATW-T1001 Bodypack",
-    shortName: "ATW-T1001",
-    manufacturer: "Audio-Technica",
-    modelNumber: "ATW-T1001",
-    searchTerms: ["audio-technica", "atw-t1001", "system 10 pro", "2.4ghz", "wireless", "transmitter", "bodypack", "lavalier", "headset"],
-    referenceUrl: "https://www.audio-technica.com/en-us/atw-t1001",
-    ports: [
-      port("cW-style Mic Input (4-pin)", "analog-audio", "input", "mini-xlr"),
-    ],
-  },
-
-  {
-    id: "at-atw-t1002",
-    deviceType: "microphone",
-    label: "ATW-T1002 Handheld",
-    shortName: "ATW-T1002",
-    manufacturer: "Audio-Technica",
-    modelNumber: "ATW-T1002",
-    searchTerms: ["audio-technica", "atw-t1002", "system 10 pro", "2.4ghz", "wireless", "transmitter", "handheld", "vocal"],
-    referenceUrl: "https://www.audio-technica.com/en-us/atw-t1002",
-    ports: [],
   },
 
   // ─── ANTENNA DISTRIBUTION ─────────────────────────────────────────────────────
