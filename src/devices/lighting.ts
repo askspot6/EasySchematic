@@ -186,7 +186,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00c4-4000-8000-000000000196",
     deviceType: "led-fixture",
-    label: "Chauvet Freedom Flex H4",
+    label: "Freedom Flex H4",
     manufacturer: "Chauvet Professional",
     modelNumber: "Freedom Flex H4",
     referenceUrl: "https://www.chauvetprofessional.com/products/freedom-flex-h4/",
@@ -379,7 +379,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01f6-4000-8000-000000000502",
     deviceType: "lighting-console",
-    label: "MA NPU",
+    label: "NPU",
     manufacturer: "MA Lighting",
     modelNumber: "MA NPU (Network Processing Unit)",
     referenceUrl:
@@ -400,7 +400,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01f7-4000-8000-000000000503",
     deviceType: "lighting-console",
-    label: "MA onPC command wing",
+    label: "onPC command wing",
     manufacturer: "MA Lighting",
     modelNumber: "MA onPC command wing",
     referenceUrl:
@@ -906,7 +906,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-020b-4000-8000-000000000523",
     deviceType: "moving-light",
-    label: "Chauvet Maverick MK3 Spot",
+    label: "Maverick MK3 Spot",
     manufacturer: "Chauvet Professional",
     modelNumber: "Maverick MK3 Spot",
     referenceUrl:
@@ -934,7 +934,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-020c-4000-8000-000000000524",
     deviceType: "moving-light",
-    label: "Chauvet Rogue Outcast 2X Wash",
+    label: "Rogue Outcast 2X Wash",
     manufacturer: "Chauvet Professional",
     modelNumber: "Rogue Outcast 2X Wash",
     referenceUrl:
@@ -961,7 +961,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-020d-4000-8000-000000000525",
     deviceType: "led-fixture",
-    label: "Chauvet Color STRIKE M",
+    label: "Color STRIKE M",
     manufacturer: "Chauvet Professional",
     modelNumber: "Color STRIKE M",
     referenceUrl:
@@ -1066,7 +1066,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0211-4000-8000-000000000529",
     deviceType: "moving-light",
-    label: "High End SolaFrame 3000",
+    label: "End SolaFrame 3000",
     manufacturer: "High End Systems",
     modelNumber: "SolaFrame 3000",
     referenceUrl:
@@ -1094,7 +1094,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0212-4000-8000-000000000530",
     deviceType: "moving-light",
-    label: "High End SolaHyBeam 3000",
+    label: "End SolaHyBeam 3000",
     manufacturer: "High End Systems",
     modelNumber: "SolaHyBeam 3000",
     referenceUrl:
@@ -1123,7 +1123,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0213-4000-8000-000000000531",
     deviceType: "moving-light",
-    label: "High End Lonestar",
+    label: "End Lonestar",
     manufacturer: "High End Systems",
     modelNumber: "Lonestar",
     referenceUrl: "https://www.etcconnect.com/Lonestar/",

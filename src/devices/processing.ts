@@ -46,7 +46,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0008-4000-8000-000000000008",
     deviceType: "converter",
-    label: "Decimator MD-LX",
+    label: "MD-LX",
     manufacturer: "Decimator Design",
     modelNumber: "MD-LX",
     referenceUrl: "https://decimator.com/Products/MiniConverters/MD-LX/MD-LX.html",
@@ -207,7 +207,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-000f-4000-8000-000000000015",
     deviceType: "scaler",
-    label: "Decimator MD-HX",
+    label: "MD-HX",
     manufacturer: "Decimator Design",
     modelNumber: "MD-HX",
     referenceUrl: "https://decimator.com/Products/MiniConverters/MD-HX/MD-HX.html",
@@ -518,7 +518,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-005c-4000-8000-000000000092",
     deviceType: "converter",
-    label: "Decimator MD-CROSS",
+    label: "MD-CROSS",
     manufacturer: "Decimator Design",
     modelNumber: "MD-CROSS",
     referenceUrl: "https://decimator.com/Products/MiniConverters/MD-CROSS/MD-CROSS.html",
@@ -596,7 +596,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-005f-4000-8000-000000000095",
     deviceType: "multiviewer",
-    label: "Decimator DMON-QUAD",
+    label: "DMON-QUAD",
     manufacturer: "Decimator Design",
     modelNumber: "DMON-QUAD",
     referenceUrl: "https://decimator.com/Products/MultiViewers/DMON-QUAD/DMON-QUAD.html",
@@ -616,7 +616,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0060-4000-8000-000000000096",
     deviceType: "multiviewer",
-    label: "Decimator DMON-4S",
+    label: "DMON-4S",
     manufacturer: "Decimator Design",
     modelNumber: "DMON-4S",
     referenceUrl: "https://decimator.com/Products/MultiViewers/DMON-4S/DMON-4S.html",
@@ -635,7 +635,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0061-4000-8000-000000000097",
     deviceType: "multiviewer",
-    label: "Decimator DMON-16S",
+    label: "DMON-16S",
     manufacturer: "Decimator Design",
     modelNumber: "DMON-16S",
     referenceUrl: "https://decimator.com/Products/MultiViewers/DMON-16S/DMON-16S.html",
@@ -1335,7 +1335,7 @@ export const templates: DeviceTemplate[] = [
     id: "c0a80101-0194-4000-8000-000000000404",
     deviceType: "converter",
     category: "converters",
-    label: "Decimator 12G-Cross",
+    label: "12G-Cross",
     manufacturer: "Decimator Design",
     modelNumber: "12G-CROSS",
     referenceUrl: "https://decimator.com/Products/MiniConverters/12G-CROSS/12G-CROSS.html",

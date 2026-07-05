@@ -132,7 +132,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-021b-4000-8000-000000000539",
     deviceType: "power-distribution",
-    label: "Lex DB-100",
+    label: "DB-100",
     manufacturer: "Lex Products",
     modelNumber: "DB-100",
     searchTerms: ["lex", "db100", "100 amp", "distro", "cam-lok", "power distribution"],
@@ -161,7 +161,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-021c-4000-8000-000000000540",
     deviceType: "power-distribution",
-    label: "Lex DB-200",
+    label: "DB-200",
     manufacturer: "Lex Products",
     modelNumber: "DB-200",
     searchTerms: ["lex", "db200", "200 amp", "distro", "cam-lok", "power distribution"],
@@ -192,7 +192,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-021d-4000-8000-000000000541",
     deviceType: "power-distribution",
-    label: "Lex Hammerhead 400A Splitter",
+    label: "Hammerhead 400A Splitter",
     manufacturer: "Lex Products",
     modelNumber: "DB400N1J4AJ2CC-63",
     searchTerms: ["lex", "hammerhead", "cam-lok", "400 amp", "breakout", "splitter", "power distribution"],

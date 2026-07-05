@@ -1002,7 +1002,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0167-4000-8000-000000000359",
     deviceType: "router",
-    label: "Ross Ultrix FR5",
+    label: "Ultrix FR5",
     manufacturer: "Ross Video",
     modelNumber: "ULTRIX-FR5",
     referenceUrl:
@@ -1033,7 +1033,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0168-4000-8000-000000000360",
     deviceType: "router",
-    label: "Ross Ultrix FR2",
+    label: "Ultrix FR2",
     manufacturer: "Ross Video",
     modelNumber: "ULTRIX-FR2",
     referenceUrl:
@@ -1062,7 +1062,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-0169-4000-8000-000000000361",
     deviceType: "router",
-    label: "Ross Ultrix FR1",
+    label: "Ultrix FR1",
     manufacturer: "Ross Video",
     modelNumber: "ULTRIX-FR1",
     referenceUrl:
@@ -1090,7 +1090,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-016a-4000-8000-000000000362",
     deviceType: "switcher",
-    label: "Ross Carbonite Black 2 M/E",
+    label: "Carbonite Black 2 M/E",
     manufacturer: "Ross Video",
     modelNumber: "Carbonite Black 2 M/E",
     referenceUrl:

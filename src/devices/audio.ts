@@ -937,7 +937,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00b2-4000-8000-000000000178",
     deviceType: "audio-dsp",
-    label: "Meyer Galileo Galaxy 816",
+    label: "Galileo Galaxy 816",
     manufacturer: "Meyer Sound",
     modelNumber: "Galileo Galaxy 816",
     referenceUrl: "https://meyersound.com/product/galileo-galaxy-816/",

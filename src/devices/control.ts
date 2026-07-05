@@ -75,7 +75,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00d0-4000-8000-000000000208",
     deviceType: "timecode-generator",
-    label: "Brainstorm SR-112",
+    label: "SR-112",
     manufacturer: "Brainstorm Electronics",
     modelNumber: "SR-112",
     referenceUrl: "https://www.brainstormtime.com/products/sr-112/",
@@ -120,7 +120,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-024b-4000-8000-000000000732",
     deviceType: "ptz-controller",
-    label: "AIDA CCU-MINI",
+    label: "CCU-MINI",
     manufacturer: "AIDA Imaging",
     modelNumber: "CCU-MINI",
     referenceUrl: "https://aidaimaging.com/ccu-mini/",

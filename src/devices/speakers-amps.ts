@@ -6,7 +6,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00a7-4000-8000-000000000167",
     deviceType: "speaker",
-    label: "Meyer Leopard",
+    label: "Leopard",
     manufacturer: "Meyer Sound",
     modelNumber: "Leopard",
     referenceUrl: "https://meyersound.com/product/leopard/",
@@ -44,7 +44,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00a9-4000-8000-000000000169",
     deviceType: "speaker",
-    label: "JBL VRX928LA",
+    label: "VRX928LA",
     manufacturer: "JBL Professional",
     modelNumber: "VRX928LA",
     referenceUrl: "https://jblpro.com/products/vrx928la",
@@ -62,7 +62,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00aa-4000-8000-000000000170",
     deviceType: "speaker",
-    label: "Meyer UPM-1P",
+    label: "UPM-1P",
     manufacturer: "Meyer Sound",
     modelNumber: "UPM-1P",
     referenceUrl: "https://meyersound.com/product/upm-1p/",
@@ -81,7 +81,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00ab-4000-8000-000000000171",
     deviceType: "speaker",
-    label: "Meyer UPA-1P",
+    label: "UPA-1P",
     manufacturer: "Meyer Sound",
     modelNumber: "UPA-1P",
     referenceUrl: "https://meyersound.com/product/upa-1p/",
@@ -120,7 +120,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00ad-4000-8000-000000000173",
     deviceType: "speaker",
-    label: "Meyer 900-LFC",
+    label: "900-LFC",
     manufacturer: "Meyer Sound",
     modelNumber: "900-LFC",
     referenceUrl: "https://meyersound.com/product/900-lfc/",
@@ -158,7 +158,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-00af-4000-8000-000000000175",
     deviceType: "speaker",
-    label: "Meyer MJF-210",
+    label: "MJF-210",
     manufacturer: "Meyer Sound",
     modelNumber: "MJF-210",
     referenceUrl: "https://meyersound.com/product/mjf-210/",
@@ -467,7 +467,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01d0-4000-8000-000000000464",
     deviceType: "speaker",
-    label: "Meyer 750-LFC",
+    label: "750-LFC",
     manufacturer: "Meyer Sound",
     modelNumber: "750-LFC",
     referenceUrl: "https://meyersound.com/product/750-lfc/",
@@ -487,7 +487,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01d1-4000-8000-000000000465",
     deviceType: "speaker",
-    label: "Meyer Lina",
+    label: "Lina",
     manufacturer: "Meyer Sound",
     modelNumber: "LINA",
     referenceUrl: "https://meyersound.com/product/lina/",
@@ -507,7 +507,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01d2-4000-8000-000000000466",
     deviceType: "speaker",
-    label: "Meyer Ultra-X23",
+    label: "Ultra-X23",
     manufacturer: "Meyer Sound",
     modelNumber: "Ultra-X23",
     referenceUrl: "https://meyersound.com/product/ultra-x23/",
@@ -526,7 +526,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01d3-4000-8000-000000000467",
     deviceType: "speaker",
-    label: "Meyer UM-1P",
+    label: "UM-1P",
     manufacturer: "Meyer Sound",
     modelNumber: "UPM-1P",
     referenceUrl: "https://meyersound.com/product/upm-1p/",
@@ -545,7 +545,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01d4-4000-8000-000000000468",
     deviceType: "speaker",
-    label: "Meyer MM-4XP",
+    label: "MM-4XP",
     manufacturer: "Meyer Sound",
     modelNumber: "MM-4XP",
     referenceUrl: "https://meyersound.com/product/mm-4xp/",
@@ -562,7 +562,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01d5-4000-8000-000000000469",
     deviceType: "speaker",
-    label: "Meyer M1D",
+    label: "M1D",
     manufacturer: "Meyer Sound",
     modelNumber: "M1D",
     referenceUrl: "https://meyersound.com/products/",
@@ -581,7 +581,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01d6-4000-8000-000000000470",
     deviceType: "speaker",
-    label: "Meyer Ultra-X40",
+    label: "Ultra-X40",
     manufacturer: "Meyer Sound",
     modelNumber: "Ultra-X40",
     referenceUrl: "https://meyersound.com/product/ultra-x40/",
@@ -600,7 +600,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01d7-4000-8000-000000000471",
     deviceType: "speaker",
-    label: "Meyer UPJ-1P",
+    label: "UPJ-1P",
     manufacturer: "Meyer Sound",
     modelNumber: "UPJ-1P",
     referenceUrl: "https://meyersound.com/product/upj-1p/",
@@ -621,7 +621,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01d8-4000-8000-000000000472",
     deviceType: "speaker",
-    label: "d&b Y7P",
+    label: "Y7P",
     manufacturer: "d&b audiotechnik",
     modelNumber: "Y7P",
     referenceUrl: "https://www.dbaudio.com/global/en/products/series/y-series/y7p/",
@@ -639,7 +639,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01d9-4000-8000-000000000473",
     deviceType: "speaker",
-    label: "d&b V8",
+    label: "V8",
     manufacturer: "d&b audiotechnik",
     modelNumber: "V8",
     referenceUrl: "https://www.dbaudio.com/global/en/products/series/v-series/v8/",
@@ -657,7 +657,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01da-4000-8000-000000000474",
     deviceType: "speaker",
-    label: "d&b V-Sub",
+    label: "V-Sub",
     manufacturer: "d&b audiotechnik",
     modelNumber: "V-SUB",
     referenceUrl: "https://www.dbaudio.com/global/en/products/series/v-series/v-sub/",
@@ -675,7 +675,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01db-4000-8000-000000000475",
     deviceType: "speaker",
-    label: "d&b E8",
+    label: "E8",
     manufacturer: "d&b audiotechnik",
     modelNumber: "E8",
     referenceUrl: "https://www.dbaudio.com/global/en/products/series/e-series/e8/",
@@ -693,7 +693,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01dc-4000-8000-000000000476",
     deviceType: "amplifier",
-    label: "d&b D20",
+    label: "D20",
     manufacturer: "d&b audiotechnik",
     modelNumber: "D20",
     referenceUrl: "https://www.dbaudio.com/global/en/products/amplifiers/d20/",
@@ -718,7 +718,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01dd-4000-8000-000000000477",
     deviceType: "speaker",
-    label: "JBL EON610",
+    label: "EON610",
     manufacturer: "JBL Professional",
     modelNumber: "EON610",
     referenceUrl: "https://jblpro.com/en/products/eon610",
@@ -739,7 +739,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01de-4000-8000-000000000478",
     deviceType: "speaker",
-    label: "JBL VRX932LAP",
+    label: "VRX932LAP",
     manufacturer: "JBL Professional",
     modelNumber: "VRX932LAP",
     referenceUrl: "https://jblpro.com/en/products/vrx932lap",
@@ -758,7 +758,7 @@ export const templates: DeviceTemplate[] = [
   {
     id: "c0a80101-01df-4000-8000-000000000479",
     deviceType: "speaker",
-    label: "JBL 305P MKII",
+    label: "305P MKII",
     manufacturer: "JBL Professional",
     modelNumber: "305P MkII",
     referenceUrl: "https://jblpro.com/en-US/products/305p-mkii",
