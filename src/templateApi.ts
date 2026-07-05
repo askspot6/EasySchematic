@@ -35,7 +35,6 @@ export async function fetchTemplates(): Promise<DeviceTemplate[]> {
 // ==================== AUTH & DRAFTS ====================
 // Stub implementations — community features not used in Tri-State build.
 
-const API_URL = "https://api.easyschematic.live";
 
 export async function checkSession(): Promise<{ id: string; email: string; name: string | null } | null> {
   return null;
