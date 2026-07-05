@@ -55,7 +55,7 @@ export const templates: DeviceTemplate[] = [
     ports: [
       port("HDMI In 1", "hdmi", "input"),
       port("HDMI In 2", "hdmi", "input"),
-      port("USB-C In", "usb-c", "input"),
+      port("USB-C In", "usb", "input"),
       port("HDMI Loop Out", "hdmi", "output"),
       port("Analog Audio In", "analog-audio", "input", "phoenix"),
       port("Network Primary (PoE)", "ethernet", "bidirectional"),
@@ -122,7 +122,7 @@ export const templates: DeviceTemplate[] = [
     referenceUrl: "https://visionary-av.com/project/d5200-decoder/",
     ports: [
       port("HDMI Out", "hdmi", "output"),
-      port("USB-C Out", "usb-c", "output"),
+      port("USB-C Out", "usb", "output"),
       port("Analog Audio Out", "analog-audio", "output", "phoenix"),
       port("Network Primary (PoE)", "ethernet", "bidirectional"),
       port("Network Expansion (PoE Out)", "ethernet", "bidirectional"),
@@ -166,7 +166,7 @@ export const templates: DeviceTemplate[] = [
     ports: [
       port("HDMI In 1", "hdmi", "input"),
       port("HDMI In 2", "hdmi", "input"),
-      port("USB-C In", "usb-c", "input"),
+      port("USB-C In", "usb", "input"),
       port("HDMI Loop Out", "hdmi", "output"),
       port("Analog Audio In", "analog-audio", "input", "phoenix"),
       port("Network Primary (PoE)", "ethernet", "bidirectional"),
@@ -213,7 +213,7 @@ export const templates: DeviceTemplate[] = [
     referenceUrl: "https://visionary-av.com/project/4200-encoder-decoder/",
     ports: [
       port("HDMI Out", "hdmi", "output"),
-      port("USB-C Out", "usb-c", "output"),
+      port("USB-C Out", "usb", "output"),
       port("Analog Audio Out", "analog-audio", "output", "phoenix"),
       port("Network Primary (PoE)", "ethernet", "bidirectional"),
       port("Network Expansion (PoE Out)", "ethernet", "bidirectional"),
@@ -320,7 +320,7 @@ export const templates: DeviceTemplate[] = [
     referenceUrl: "https://visionary-av.com/project/duete5-wp-c/",
     ports: [
       port("HDMI In", "hdmi", "input"),
-      port("USB-C In", "usb-c", "input"),
+      port("USB-C In", "usb", "input"),
       port("Network (PoE)", "ethernet", "bidirectional"),
     ],
   },
@@ -340,7 +340,7 @@ export const templates: DeviceTemplate[] = [
     referenceUrl: "https://visionary-av.com/project/duete5-wp-c-bt/",
     ports: [
       port("HDMI In", "hdmi", "input"),
-      port("USB-C In", "usb-c", "input"),
+      port("USB-C In", "usb", "input"),
       port("Bluetooth Audio", "bluetooth", "input"),
       port("Network (PoE)", "ethernet", "bidirectional"),
     ],
