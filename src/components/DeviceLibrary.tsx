@@ -40,7 +40,7 @@ function HighlightedText({ text, query }: { text: string; query: string }) {
   return (
     <>
       {text.slice(0, idx)}
-      <span className="text-blue-600 font-semibold">
+      <span className="text-blue-400">
         {text.slice(idx, idx + query.length)}
       </span>
       {text.slice(idx + query.length)}
@@ -1161,7 +1161,7 @@ export default function DeviceLibrary() {
     addOwnedGear(template, 1);
   }, [addOwnedGear]);
 
-  const query = search.trim();
+  const query = search.trim().length >= 2 ? search.trim() : "";
 
   const filteredCustom = useMemo(() => {
     let result = customTemplates;
