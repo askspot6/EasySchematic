@@ -36,6 +36,7 @@ import { templates as visionary } from "./devices/visionary";
 import { templates as qsys } from "./devices/qsys";
 import { templates as shure } from "./devices/shure";
 import { templates as audioTechnica } from "./devices/audio_technica";
+import { templates as rfVenue } from "./devices/rfvenue";
 
 import { DEVICE_TYPE_TO_CATEGORY } from "./deviceTypeCategories";
 export { DEVICE_TYPE_TO_CATEGORY };
@@ -75,6 +76,7 @@ export const DEVICE_TEMPLATES: DeviceTemplate[] = [
   ...qsys,
   ...shure,
   ...audioTechnica,
+  ...rfVenue,
 ];
 
 export const CARD_TEMPLATES: DeviceTemplate[] = [...expansionCards, ...storageMedia];
