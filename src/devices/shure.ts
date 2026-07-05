@@ -711,7 +711,6 @@ export const templates: DeviceTemplate[] = [
     ],
   },
 
-];
 
   // ─── RF ACCESSORIES & ANTENNA DISTRIBUTION ───────────────────────────────────
 
