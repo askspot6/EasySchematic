@@ -407,4 +407,75 @@ export const templates: DeviceTemplate[] = [
     ],
   },
 
+  // ─── RF ACCESSORIES & ANTENNA DISTRIBUTION ───────────────────────────────────
+
+  {
+    id: "at-atw-a65",
+    deviceType: "audio-interface",
+    label: "ATW-A65",
+    shortName: "ATW-A65",
+    manufacturer: "Audio-Technica",
+    modelNumber: "ATW-A65",
+    searchTerms: ["audio-technica", "atw-a65", "system 20 pro", "wireless access point", "wap", "2.4ghz", "link"],
+    powerDrawW: 5,
+    voltage: "AC Adapter",
+    referenceUrl: "https://www.audio-technica.com/en-us/atw-a65",
+    ports: [
+      port("RJ12 In (from chassis)", "ethernet", "input"),
+      ...ports("RJ12 Out (to chassis)", "ethernet", "output", 5),
+    ],
+  },
+
+  {
+    id: "at-atw-a49",
+    deviceType: "audio-interface",
+    label: "ATW-A49",
+    shortName: "ATW-A49",
+    manufacturer: "Audio-Technica",
+    modelNumber: "ATW-A49",
+    searchTerms: ["audio-technica", "atw-a49", "antenna", "lpda", "directional", "uhf", "remote", "wideband"],
+    referenceUrl: "https://www.audio-technica.com/en-us/atw-a49",
+    ports: [
+      port("BNC Out", "rf", "output", "bnc"),
+    ],
+  },
+
+  {
+    id: "at-atw-da49",
+    deviceType: "audio-interface",
+    label: "ATW-DA49",
+    shortName: "ATW-DA49",
+    manufacturer: "Audio-Technica",
+    modelNumber: "ATW-DA49",
+    searchTerms: ["audio-technica", "atw-da49", "antenna", "distribution", "active", "4 way", "uhf", "wideband"],
+    powerDrawW: 10,
+    voltage: "AC Adapter",
+    heightMm: 44,
+    widthMm: 210,
+    referenceUrl: "https://www.audio-technica.com/en-us/atw-da49",
+    ports: [
+      port("Antenna A In", "rf", "input", "bnc"),
+      port("Antenna B In", "rf", "input", "bnc"),
+      ...ports("Receiver Out A", "rf", "output", 4, "bnc"),
+      ...ports("Receiver Out B", "rf", "output", 4, "bnc"),
+      port("DC Power", "power", "input"),
+    ],
+  },
+
+  {
+    id: "at-atw-a44pr",
+    deviceType: "audio-interface",
+    label: "ATW-A44PR",
+    shortName: "ATW-A44PR",
+    manufacturer: "Audio-Technica",
+    modelNumber: "ATW-A44PR",
+    searchTerms: ["audio-technica", "atw-a44pr", "antenna", "combiner", "passive", "4 way", "uhf"],
+    referenceUrl: "https://www.audio-technica.com/en-us/atw-a44pr",
+    ports: [
+      ...ports("Receiver In", "rf", "input", 4, "bnc"),
+      port("Antenna Out A", "rf", "output", "bnc"),
+      port("Antenna Out B", "rf", "output", "bnc"),
+    ],
+  },
+
 ];

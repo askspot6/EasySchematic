@@ -712,3 +712,88 @@ export const templates: DeviceTemplate[] = [
   },
 
 ];
+
+  // ─── RF ACCESSORIES & ANTENNA DISTRIBUTION ───────────────────────────────────
+
+  {
+    id: "shure-ua844-swb",
+    deviceType: "audio-interface",
+    label: "UA844+SWB",
+    shortName: "UA844+SWB",
+    manufacturer: "Shure",
+    modelNumber: "UA844+SWB",
+    searchTerms: ["shure", "ua844", "antenna", "distribution", "active", "4 way", "splitter", "wideband", "uhf"],
+    powerDrawW: 12,
+    voltage: "100-240V",
+    heightMm: 44,
+    widthMm: 210,
+    referenceUrl: "https://www.shure.com/en-US/products/wireless-accessories/ua844swb",
+    ports: [
+      port("Antenna A In", "rf", "input", "bnc"),
+      port("Antenna B In", "rf", "input", "bnc"),
+      ...ports("Receiver Out A", "rf", "output", 4, "bnc"),
+      ...ports("Receiver Out B", "rf", "output", 4, "bnc"),
+      port("AC Power", "power", "input"),
+    ],
+  },
+
+  {
+    id: "shure-ua221",
+    deviceType: "audio-interface",
+    label: "UA221",
+    shortName: "UA221",
+    manufacturer: "Shure",
+    modelNumber: "UA221",
+    searchTerms: ["shure", "ua221", "antenna", "splitter", "passive", "2 way", "wideband"],
+    referenceUrl: "https://www.shure.com/en-US/products/wireless-accessories/ua221",
+    ports: [
+      port("Antenna In", "rf", "input", "bnc"),
+      port("Receiver Out 1", "rf", "output", "bnc"),
+      port("Receiver Out 2", "rf", "output", "bnc"),
+    ],
+  },
+
+  {
+    id: "shure-ua411",
+    deviceType: "audio-interface",
+    label: "UA411",
+    shortName: "UA411",
+    manufacturer: "Shure",
+    modelNumber: "UA411",
+    searchTerms: ["shure", "ua411", "antenna", "combiner", "passive", "4 way", "wideband", "uhf"],
+    referenceUrl: "https://www.shure.com/en-US/products/wireless-accessories/ua411",
+    ports: [
+      ...ports("Receiver In", "rf", "input", 4, "bnc"),
+      port("Antenna Out A", "rf", "output", "bnc"),
+      port("Antenna Out B", "rf", "output", "bnc"),
+    ],
+  },
+
+  {
+    id: "shure-ua860swb",
+    deviceType: "audio-interface",
+    label: "UA860SWB",
+    shortName: "UA860SWB",
+    manufacturer: "Shure",
+    modelNumber: "UA860SWB",
+    searchTerms: ["shure", "ua860", "antenna", "omni", "wideband", "uhf", "remote"],
+    referenceUrl: "https://www.shure.com/en-US/products/wireless-accessories/ua860swb",
+    ports: [
+      port("BNC Out", "rf", "output", "bnc"),
+    ],
+  },
+
+  {
+    id: "shure-ua874-swb",
+    deviceType: "audio-interface",
+    label: "UA874SWB",
+    shortName: "UA874SWB",
+    manufacturer: "Shure",
+    modelNumber: "UA874SWB",
+    searchTerms: ["shure", "ua874", "antenna", "directional", "helical", "wideband", "uhf", "remote"],
+    referenceUrl: "https://www.shure.com/en-US/products/wireless-accessories/ua874swb",
+    ports: [
+      port("BNC Out", "rf", "output", "bnc"),
+    ],
+  }
+];
